@@ -1,0 +1,64 @@
+﻿@using DoAn2023.Models.ViewModels.UngTuyen
+@model List<UngTuyen>
+
+@{
+    ViewBag.Title = "Danh sách ứng tuyển";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Admin/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/Client/css/hoso.css">
+}
+
+<div class="main__content">
+    <div class="main__content--wrapper grid wide">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header py-2">
+                            <h4 class="header-title mb-0">Công việc đã ứng tuyển</h4>
+                        </div>
+                        <div class="collapse show">
+                            <div class="col-md-12 p-0">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="result__item--wrapper my-2">
+                                        <div class="result__item--img p-3">
+                                            <img class="full_width" src="@item.AnhDaiDien" alt="Logo nhà tuyển dụng">
+                                        </div>
+                                        <div class="result__item--name">
+                                            <h3 class="result__name--title">
+                                                <span class="text-line-1">
+                                                    <a href="/tin-tuyen-dung/@item.TieuDeTTD-@item.MaTTD">@item.TenCongViec</a>
+                                                </span>
+                                                <span class="result__name--view">
+                                                    <a class="btn btn-success" target="_blank" href="@item.LinkHoSo">
+                                                        Xem hồ sơ
+                                                    </a>
+                                                </span>
+                                            </h3>
+                                            <p class="result__address mb-0">
+                                                <span class="result__icon"><i class="fas fa-map-marked"></i></span>
+                                                <span>@item.TenNTD</span>
+                                            </p>
+                                            <p class="result__salary">
+                                                <span class="result__icon"><i class="fas fa-money-check-alt"></i></span>
+                                                Ngày nộp: <span>@item.NgayUngTuyen</span>
+                                            </p>
+                                            <div>
+                                                Trạng thái: <h2 class="badge badge-info">@item.TrangThai</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

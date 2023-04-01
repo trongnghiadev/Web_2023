@@ -1,0 +1,289 @@
+/* Main */
+.main {
+    position: relative;
+}
+
+.main__fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background-image: url(../img/bg-seccity.jpg);
+    background-attachment: fixed;
+}
+
+/* Main Search */
+.main__search {
+    padding: 10px 0 5px 0;
+}
+
+/* Main content */
+.main__employer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.main__employer--info {
+    display: flex;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #999;
+}
+
+.employer__info--img {
+    width: 110px;
+    height: 110px;
+    margin-right: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.employer__info--img > img {
+    height: 100%;
+    object-fit: fill;
+}
+
+.employer__info--recruitment > h1,
+.employer__content--title {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 0;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+.employer__info--link > a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.employer__info--link:hover > a {
+    color: rgb(10, 159, 245);
+}
+
+.employer__info--deadline {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.employer__apply--cv > button,
+.employer__apply--save > button,
+.apply__button--cancel,
+.apply__button--submit {
+    border: none;
+    font-size: 16px;
+    min-width: 120px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+}
+
+.employer__content--title {
+    margin-top: 25px;
+    font-size: 22px;
+}
+
+.employer--title::before {
+    content: '';
+    margin-right: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.employer__content--info p {
+    line-height: 28px;
+    
+}
+
+.main__employer--content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.employer__content--company {
+    background-color: #ebeeef;
+    padding: 8px 10px;
+    min-height: 250px;
+}
+
+.employer__content--company > h2 {
+    font-size: 20px;
+}
+
+.content__company--list {
+    line-height: 24px;
+    list-style: none;
+    font-size: 15px;
+}
+
+.content__company--list li {
+    margin: 10px 0;
+}
+
+.content__company--list li > p {
+    text-align: justify;
+    margin: 5px 20px 10px;
+}
+
+.content__company--list .fa-solid {
+    min-width: 25px;
+    font-size: 15px;
+    color: rgb(14, 158, 158);
+}
+
+.content__info--title {
+    font-size: 22px;
+    color: var(--primary-color);
+}
+
+.content__info--list {
+    line-height: 28px;
+    list-style: none;
+}
+
+.content__info--list li::before {
+    font-family: FontAwesome;
+    margin-right: 10px;
+    content: "\f058";
+    color: #019e2b;
+}
+
+.content__info--list li > p {
+    margin: 0;
+    margin-left: 20px;
+}
+
+/* Main Apply */
+.main__apply {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.main__apply--post {
+    position: fixed;
+    z-index: 11;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    background-color: var(--white-color);
+    width: 500px;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 15px;
+    transition: all .5s linear;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.main__apply.show,
+.main__apply.show .main__apply--post {
+    display: block;
+}
+
+.main__apply.show .main__apply--post {
+    animation: showForm .5s linear;
+}
+
+.main__apply--title {
+    font-size: 22px;
+    line-height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apply--close::after {
+    content: 'x';
+    cursor: pointer;
+    padding: 0 10px;
+    color: #999;
+}
+
+.apply--close:hover::after {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.main__apply--content input[type=radio] {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.main__apply--upload {
+    margin-top: 20px;
+}
+
+#cv_upload,
+.apply__online--content,
+.apply__content--uploadcv {
+    display: none;
+}
+
+#cv_type-online:checked ~ .apply__online--content,
+#cv_type-upload:checked ~ .apply__content--uploadcv {
+    display: block;
+}
+
+#cv_type-online + label::before,
+#cv_type-upload + label::before {
+    content: '\f058';
+    margin-right: 10px;
+    color: #999;
+    font-family: FontAwesome;
+}
+
+#cv_type-online:checked + label::before,
+#cv_type-upload:checked + label::before {
+    content: '\f058';
+    color: var(--primary-color);
+}
+
+.apply__content--cv {
+    font-weight: 500;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.main__apply--note textarea{
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.main__apply--note textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 13px;
+    font-style: italic;
+}
+
+#cv_upload + .lb_upload {
+    padding: 5px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+}
+
+.main__apply--button {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.apply__button--cancel,
+.apply__button--submit {
+    border-radius: 5px;
+}
+
+.apply__button--submit {
+    color: white;
+    background-color: var(--primary-color);
+}

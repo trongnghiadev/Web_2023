@@ -1,0 +1,73 @@
+﻿@using DoAn2023.Models.ViewModels.TinTuyenDung
+@model List<TinTuyenDungLuu>
+
+@{
+    ViewBag.Title = "Tin tuyển dụng đã lưu";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Admin/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/Client/css/home.css">
+}
+
+<div class="main__content">
+    <div class="main__content--wrapper grid wide">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header py-2">
+                            <h4 class="header-title mb-0">Danh sách tin tuyển đã lưu</h4>
+                        </div>
+                        <div class="collapse show">
+                            <div class="col-md-12 p-0">
+                                <div class="main__recruitment--content row my-2">
+                                    @foreach (var item in Model)
+                                    {
+                                        <div class="recruitment__item col l-6 m-6 c-12">
+                                            <div class="recruitment__item--wrapper">
+                                                <div class="recruitment__item--img">
+                                                    <img class="full_width" src="@item.AnhDaiDien" alt="Logo nhà tuyển dụng">
+                                                    <div class="recruitment__item--time">@item.DiaChi</div>
+                                                </div>
+                                                <div class="recruitment__item--name">
+                                                    <h2 class="recruitment__name--title">
+                                                        <a href="/tin-tuyen-dung/@item.TieuDeTTD-@item.MaTTD" class="recruitment__name--link text-line-1">
+                                                            @item.TenCongViec
+                                                        </a>
+                                                    </h2>
+                                                    <div class="recruitment__name--employer">
+                                                        <a href="/cong-ty/@item.TieuDeNTD-@item.MaNTD" class="recruitment__employer--link text-line-1">
+                                                            <span class="recruitment__icon"><i class="far fa-building"></i></span>
+                                                            <span class="">@item.TenNTD</span>
+                                                        </a>
+                                                    </div>
+                                                    <p class="recruitment__salary">
+                                                        <span class="recruitment__icon"><i class="fas fa-money-check-alt"></i></span>
+                                                        <span>@item.MucLuong</span>
+                                                    </p>
+                                                    <p class="recruitment__address">
+                                                        <span class="recruitment__icon"><i class="fas fa-map-marked"></i></span>
+                                                        <span>@item.LoaiCV</span>
+                                                    </p>
+                                                </div>
+                                                <form action="/Recruitment/Save" method="post">
+                                                    @Html.Hidden("MaTTD", item.MaTTD)
+                                                    <button class="btn btn-bordered-info">
+                                                        <i class="fa-solid fa-heart"></i>
+                                                        <span>Bỏ lưu</span>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

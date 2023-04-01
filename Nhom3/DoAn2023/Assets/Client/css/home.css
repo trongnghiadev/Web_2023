@@ -1,0 +1,361 @@
+/* Main */
+.main {
+    position: relative;
+}
+
+.main__fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background-color: whitesmoke;
+    background-attachment: fixed;
+}
+
+/* Main CV */
+.main__cv {
+    margin-top: 30px;
+}
+
+.main__cv--wrapper {
+    padding: 20px 0;
+}
+
+.cv__item--wrapper {
+    position: relative;
+    background: linear-gradient(50deg,#E1F7EB, #EAF7FA, #EDFBF7);
+    min-height: 260px;
+    padding-left: 24px;
+}
+
+.cv__item--description {
+    max-width: 60%;
+}
+
+.cv__item--description h2 {
+    font-size: 20px;
+    padding: 20px 0 15px;
+}
+
+.cv__item--description h3 {
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+
+.cv__item--link {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.cv__item--img {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 250px;
+    height: 200px;
+}
+
+/* Main Recruitment */
+.main__recruitment--wrapper {
+    padding: 20px 0;
+}
+
+.main__item--title {
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.recruitment__item {
+    padding-bottom: 10px;
+}
+
+.recruitment__item--wrapper {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    display: flex;
+    padding: 8px 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%), 
+                0 6px 20px 0 rgb(0 0 0 / 6%);
+}
+
+.recruitment__item--wrapper:hover {
+    background-color: var(--bg-hover);
+}
+
+.recruitment__item--img img {
+    width: 75px;
+    height: 80px;
+    border-radius: 6px;
+}
+
+.recruitment__item--time {
+    margin-top: 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--white-color);
+    background-color: var(--bg-text-color);
+    text-align: center;
+}
+
+.recruitment__item--name {
+    flex: 1;
+    padding: 2px 10px 0px;
+}
+
+.recruitment__name--title {
+    font-size: 14px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.recruitment__name--link {
+    line-height: 22px;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.recruitment__name--link:hover {
+    text-decoration: underline;
+    color: var(--text-hover);
+}
+
+.recruitment__employer--link {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.recruitment__employer--link:hover {
+    color: var(--text-hover);
+}
+
+.recruitment__icon {
+    width: 20px;
+    display: inline-block;
+}
+
+.recruitment__salary {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+/* Main Employer */
+.main__employer--wrapper {
+    padding: 20px 0;
+}
+
+.employer__item {
+    padding-bottom: 15px;
+}
+
+.employer__item--wrapper {
+    background-color: var(--white-color);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.employer__item--wrapper:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.employer__item--link {
+    display: block;
+    text-decoration: none;
+    height: 150px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.employer__item--link img {
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    height: 100%;
+    width: auto;
+}
+
+/* Main blogs */
+.main__blog {
+    padding-bottom: 20px;
+}
+
+.blog__item {
+    margin-bottom: 20px;
+}
+
+.blog__item--wrapper {
+    overflow: hidden;
+    border-radius: 4px;
+    transition: all .1s linear;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.blog__item--link:hover {
+    text-decoration: none;
+}
+
+.blog__item--wrapper:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.blog__item--img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog__item--img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.blog__item--content {
+    padding: 20px;
+}
+
+.blog__item--description {
+    min-height: 120px;
+}
+
+.blog__item--name {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: var(--black-color);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.blog__item--data {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.blog__item--see {
+    font-size: 14px;
+    color: rgba(2, 2, 2, 0.5);
+    font-style: normal;
+    text-decoration: underline;
+    margin-top: 5px;
+}
+
+/* Main login */
+/* Main register */
+.main__login,
+.main__register {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.main__login--wrapper,
+.main__register--wrapper {
+    position: fixed;
+    z-index: 11;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    background-color: var(--white-color);
+    width: 500px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all .5s linear;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: none;
+}
+
+.main__login.show,
+.main__login.show .main__login--wrapper,
+.main__register.show .main__register--wrapper {
+    display: block;
+}
+
+.main__login.show .main__login--wrapper,
+.main__register.show .main__register--wrapper {
+    animation: showForm .5s linear;
+}
+
+.main__login--title,
+.main__register--title {
+    font-size: 22px;
+    background-color: aliceblue;
+    line-height: 25px;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.login--close::after,
+.register--close::after {
+    content: 'x';
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: #999;
+    cursor: pointer;
+}
+
+.login--close:hover::after,
+.register--close:hover::after {
+    color: black;
+}
+
+.main__login--content,
+.main__register--content {
+    padding: 20px 25px;
+}
+
+.login__form--input,
+.register__form--input {
+    margin: 15px;
+}
+
+.login__form--input > input,
+.register__form--input > input {
+    display: block;
+    padding: 8px 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #999;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.form__input--submit,
+.form__register--submit {
+    padding: 8px;
+    margin-top: 20px;
+    color: var(--white-color);
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+
+.form__input--submit:hover,
+.form__input--submit:hover {
+    opacity: 1;
+}
+
+.main__login--note,
+.main__register--note {
+    text-align: center;
+    margin-bottom: 20px;
+}

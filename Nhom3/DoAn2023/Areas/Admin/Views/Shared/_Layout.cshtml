@@ -1,0 +1,191 @@
+﻿@using DoAn2023.Common;
+@using DoAn2023.Areas.Admin.Models;
+
+@{ 
+    var userLogin = (AdminLogin)Session[CommonConstants.ADMIN_SESSION];
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title - Trang quản trị</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Website tìm việc làm cho sinh viên ngành công nghệ thông tin" name="description">
+    <meta content="Coderthemes" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    <!-- App css -->
+    <link href="~/Assets/Admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/Admin/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Assets/Admin/css/app.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                <li class="d-none d-sm-block">
+                    <form class="app-search">
+                        <div class="app-search-box">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <div class="input-group-append">
+                                    <button class="btn" type="submit">
+                                        <i class="fe-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+
+                @if (Session[CommonConstants.ADMIN_SESSION] != null)
+                {
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="~/Assets/Client/img/Candidate/user-default.png" alt="user-image" class="rounded-circle">
+                            <span class="pro-user-name ml-1">
+                                @userLogin.Email <i class="mdi mdi-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                            <!-- item-->
+                            <div class="dropdown-header noti-title">
+                                <h6 class="text-overflow m-0 text-center">@userLogin.Role</h6>
+                            </div>
+
+                            <div class="dropdown-divider"></div>
+
+                            <!-- item-->
+                            <a href="@Url.Action("Logout", "Home")" class="dropdown-item notify-item">
+                                <i class="remixicon-logout-box-line"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+
+                        </div>
+                    </li>
+                }
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="@Url.Action("Index","Home")" class="logo text-center">
+                    <span class="logo-lg">
+                        <img src="~/Assets/Admin/img/logo.png" alt="" height="60">
+                    </span>
+                    <span class="logo-sm">
+                        <img src="~/Assets/Admin/img/logo.png" alt="" height="24">
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li>
+                    <button class="button-menu-mobile waves-effect waves-light">
+                        <i class="fe-menu"></i>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+        <!-- end Topbar -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+            <div class="slimscroll-menu">
+
+                <!--- Sidemenu -->
+                @{Html.RenderAction("_SidebarMenu", "Home");}
+                <!-- End Sidebar -->
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                @if (TempData["AlertMessage"] != null)
+                {
+                    <div id="msgAlert" class="alert @TempData["AlertType"]" role="alert">
+                        @TempData["AlertMessage"]
+                    </div>
+                }
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                                        @if (ViewBag.PrevPage != null)
+                                        {
+                                            <li class="breadcrumb-item active"><a href="javascript: void(0);">@ViewBag.PrevPage</a></li>
+}
+                                        <li class="breadcrumb-item active"><a href="javascript: void(0);">@ViewBag.CurrentPage</a></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @RenderBody()
+
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            &copy;Website tuyển dụng - 2022
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    <!-- Vendor js -->
+    <script src="~/Assets/Admin/js/vendor.min.js"></script>
+
+    <!-- App js -->
+    <script src="~/Assets/Admin/js/app.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $("#msgAlert").fadeOut("slow");
+        }, 2000);
+    </script>
+    @RenderSection("scripts", false)
+</body>
+</html>

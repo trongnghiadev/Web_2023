@@ -1,0 +1,218 @@
+﻿@using DoAn2023.Models.ViewModels.HoSoXinViec
+@model DoAn2023.Models.ViewModels.TinTuyenDung.TinTuyenDungVmDetail
+
+@{
+    ViewBag.Title = Model.TenCongViec + " - " + Model.TenNTD;
+    var listCV = new List<HoSoXinViecVm>();
+    if (ViewBag.ListCV != null)
+    {
+        listCV = (List<HoSoXinViecVm>)ViewBag.ListCV;
+    }
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Client/css/tintuyendung.css">
+}
+
+@section scripts_Main {
+    <script src="~/Assets/Client/js/style.js"></script>
+    <script src="~/Assets/Client/js/searchkey.js"></script>
+    <script src="~/Assets/Client/js/tintuyendung.js"></script>
+}
+
+<div class="main__fixed bg-img"></div>
+<div class="main__search">
+    <div class="main__search--wrapper grid wide">
+        @{ Html.RenderAction("_ViewSearch", "Home");}
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="main__employer">
+    <div class="main__employer--wrapper grid wide">
+        <div class="main__employer--info">
+            <div class="employer__info--img">
+                <img src="@Model.AnhDaiDien" alt="" class="full_width">
+            </div>
+            <div class="employer__info--recruitment c-flex">
+                <h1>@Model.TenCongViec</h1>
+                <div class="employer__info--link">
+                    <a href="/cong-ty/@Model.TieuDeNTD-@Model.MaNTD">
+                        <i class="far fa-building"></i>
+                        @Model.TenNTD
+                    </a>
+                </div>
+                <div class="employer__info--deadline">
+                    <i class="fa-regular fa-clock"></i>
+                    Hạn nộp: @Model.HanNop
+                </div>
+            </div>
+            <div class="employer__info--apply">
+                @if (DateTime.ParseExact(Model.HanNop, "dd/MM/yyyy HH:mm:ss", null) > DateTime.Now)
+                {
+                    <div class="employer__apply--cv">
+                        <button class="apply__cv--button button--link">Ứng tuyển</button>
+                    </div>
+                    <form class="employer__apply--save" action="/Recruitment/Save" method="post">
+                        @Html.Hidden("MaTTD", Model.MaTTD)
+                        <button class="apply__save--button button--link">
+                            @if (ViewBag.Status != null)
+                            {
+                                if ((int)ViewBag.Status > 0)
+                                {
+                                    <i class="fa-solid fa-heart"></i>
+                                    <span>Bỏ lưu</span>
+                                }
+                                else
+                                {
+                                    <i class="fa-solid fa-heart"></i>
+                                    <span>Lưu tin</span>
+                                }
+                            }
+                            else
+                            {
+                                <i class="fa-solid fa-heart"></i>
+                                <span>Lưu tin</span>
+                            }
+
+                        </button>
+                    </form>
+                }
+                else 
+                { 
+                    <div class="employer__apply--cv">
+                        Hết hạn ứng tuyển
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="main__employer--content row">
+            <div class="col c-4">
+                <div class="employer__content--company">
+                    <h2 class="employer--title">Nhà tuyển dụng: </h2>
+                    <ul class="content__company--list">
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-building"></i>
+                                <strong>@Model.TenNTD</strong>
+                            </a>
+                            <p>@Model.MoTa</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-user-group"></i>
+                            <strong>Quy mô: </strong><span>@Model.QuyMo</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-map-location"></i>
+                            <strong>Địa chỉ: </strong><span>@Model.DiaChiNTD</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col c-8">
+                <h1 class="employer__content--title employer--title">Chi tiết công việc</h1>
+                <div class="employer__content--info">
+                    <h3 class="content__info--title">1. Thông tin tuyển dụng</h3>
+                    <ul class="content__info--list">
+                        <li>Mức lương: @Model.MucLuong</li>
+                        <li>Hình thức làm việc: @Model.LoaiCV</li>
+                        <li>Giới tính: @Model.GioiTinhYC</li>
+                        <li>Số lượng tuyển: @Model.SoLuong</li>
+                        <li>Cấp bậc: @Model.CapBac</li>
+                        <li>
+                            Địa điểm làm việc:
+                            <p>- Khu vực: @Model.DiaChi</p>
+                            <p>- @Model.DiaChiLamViec</p>
+                        </li>
+                    </ul>
+                    <h3 class="content__info--title">2. Mô tả công việc</h3>
+                    <div style="padding-left: 20px">
+                        <p>@Html.Raw(Model.MoTaCongViec)</p>
+                    </div>
+                    <h3 class="content__info--title">3. Yêu cầu ứng viên</h3>
+                    <div style="padding-left: 20px">
+                        <p>
+                            @Html.Raw(Model.YeuCauUngVien)
+                        </p>
+                    </div>
+                    <h3 class="content__info--title">4. Kỹ năng liên quan</h3>
+                    <div style="padding-left: 20px">
+                        <p>
+                            @Html.Raw(Model.KyNangLienQuan)
+                        </p>
+                    </div>
+                    <h3 class="content__info--title">5. Quyền lợi</h3>
+                    <div style="padding-left: 20px">
+                        <p>
+                            @Html.Raw(Model.KyNangLienQuan)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main__apply">
+    @using (Html.BeginForm("UngTuyen", "Recruitment", FormMethod.Post, new { @class = "main__apply--post", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Hidden("MaTTD", Model.MaTTD)
+        <div class="main__apply--title">
+            <h4>Ứng tuyển <span>@Model.TenCongViec</span></h4>
+            <div class="apply--close"></div>
+        </div>
+        <div class="main__apply--content">
+            <div class="main__apply--online">
+                <div>
+                    <input type="radio" hidden name="cv_type" id="cv_type-online">
+                    <label for="cv_type-online">Sử dụng CV online</label>
+                    <div class="apply__online--content">
+                        @if (listCV.Count > 0)
+                        {
+                            foreach (var item in listCV)
+                            {
+                                <div class="apply__content--cv">
+                                    <input type="radio" name="HoSo" value="/HoSoXinViec/HoSo?ungvien=@item.MaUngVien&id=@item.MaHoSo">
+                                    <a href="/HoSoXinViec/HoSo?ungvien=@item.MaUngVien&id=@item.MaHoSo" target="_blank">@item.TenHoSo</a>
+                                </div>
+                            }
+                        }else
+                        {
+                            <div>
+                                <strong>Bạn chưa có hồ sơ xin việc</strong>
+                            </div>
+                            <div>
+                                <a class="btn btn-success" href="/HoSoXinViec/Create">Tạo hồ sơ mới</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="main__apply--upload">
+                <div>
+                    <input type="radio" hidden name="cv_type" id="cv_type-upload">
+                    <label for="cv_type-upload">Tải CV từ máy tính</label>
+                    <div class="apply__content--uploadcv">
+                        <input type="file" name="FileCV" id="cv_upload" hidden>
+                        <label for="cv_upload" class="lb_upload">
+                            <i class="fa-solid fa-upload"></i>
+                            Chọn file
+                        </label>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="main__apply--note">
+                <h4>Lời nhắn:</h4>
+                <textarea name="letter" id="letter" rows="3" placeholder="Bạn có thể nêu mong muốn, lý do lựa chọn công ty này nhằm gây ấn tượng với nhà tuyển dụng..."></textarea>
+            </div>
+            <div class="main__apply--button">
+                <button class="apply__button--cancel">Bỏ qua</button>
+                <button class="apply__button--submit">Nộp CV</button>
+            </div>
+        </div>
+    }
+</div>

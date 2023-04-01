@@ -1,0 +1,72 @@
+﻿@model List<DoAn2023.Models.ViewModels.HoSoXinViec.HoSoXinViecVm>
+
+@{
+    ViewBag.Title = "Hồ sơ xin việc";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Admin/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/Client/css/hoso.css">
+}
+
+
+<div class="main__fixed bg-img"></div>
+
+<div class="main__content">
+    <div class="main__content--wrapper grid wide">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header py-2">
+                            <h4 class="header-title mb-0">Danh sách hồ sơ xin việc của bạn</h4>
+                        </div>
+                        <div class="py-2">
+                            <a href="@Url.Action("Create","HoSoXinViec")" class="btn btn-success">
+                                <i class="fa-solid fa-circle-plus mr-1"></i>Tạo mới</a>
+                        </div>
+                        <div class="collapse show">
+                            <div class="col-md-12 p-0">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="result__item--wrapper my-2">
+                                        <div class="result__item--img p-3">
+                                            <img class="full_width" src="~/Assets/Client/img/create_cv.png" alt="Ảnh CV">
+                                        </div>
+                                        <div class="result__item--name">
+                                            <h3 class="result__name--title">
+                                                <span class="text-line-1">
+                                                    @item.TenHoSo
+                                                </span>
+                                                <span class="result__name--view">
+                                                    <a class="btn btn-success" target="_blank" href="/HoSoXinViec/HoSo?ungvien=@item.MaUngVien&id=@item.MaHoSo">
+                                                        Xem hồ sơ
+                                                    </a>
+                                                </span>
+                                            </h3>
+                                            <p class="result__salary">
+                                                <span class="result__icon"><i class="fas fa-money-check-alt"></i></span>
+                                                Mã số: <span>@item.MaHoSo</span>
+                                            </p>
+                                            <p class="result__address mb-0">
+                                                <span class="result__icon"><i class="fas fa-map-marked"></i></span>
+                                                <span>@item.MaCapBac</span>
+                                            </p>
+                                            <div class="hoso_button mt-2 d-flex justify-content-end">
+                                                <a href="/HoSoXinViec/Edit/@item.MaHoSo" class="btn-default mx-2 p-1">
+                                                    <i class="fa-solid fa-pen-to-square mr-1"></i>Sửa</a>
+                                                <a class="btn-default mx-2 p-1 mdi-cursor-pointer">
+                                                    <i class="fa-solid fa-trash-can mr-1"></i>Xóa</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

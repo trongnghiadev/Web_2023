@@ -1,0 +1,223 @@
+﻿@using DoAn2023.Models.ViewModels.User;
+@using DoAn2023.Common;
+
+@{ 
+    var userLogin = (UserLogin)Session[CommonConstants.USER_SESSION];
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Tuyển dụng NCD</title>
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="~/Assets/Client/css/grid.css">
+    <link rel="stylesheet" href="~/Assets/Client/css/base.css">
+    @RenderSection("css_Main", required: false)
+    <link rel="stylesheet" href="~/Assets/Client/css/response.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header" id="header">
+            <div class="header__logo">
+                <a href="/" class="header__logo--link">
+                    <img class="img-banner-left" src="~/Images/image-member/logofn.png" />
+                </a>
+            </div>
+            <nav class="header__navbar">
+                <ul class="header__navbar--list">
+                    <li class="header__navbar--item active">
+                        <a href="/" target="_blank" rel="noopener">Trang chủ</a>
+                    </li>
+                    <li class="header__navbar--item">
+                        <a href="javascript:void(0)">
+                            Hồ sơ & CV
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="header__subnav">
+                            <li><a href="@Url.Action("Index","HoSoXinViec")">Quản lý CV</a></li>
+                            <li><a href="@Url.Action("Create","HoSoXinViec")">Tạo CV</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__navbar--item">
+                        <a href="@Url.Action("Search","Home")">Tìm việc làm</a>
+                    </li>
+                    <li class="header__navbar--item">
+                        <a href="@Url.Action("About","Home")">Giới thiệu</a>
+                    </li>
+                </ul>
+
+                @if (userLogin != null)
+                {
+                    <div class="header__user--info">
+                        <div class="user__info--content">
+                            @if (TempData["AnhDaiDien"] != null)
+                            {
+                                <div class="user__info--img bg-img" style="background-image: url(@TempData["AnhDaiDien"]);"></div>
+                            }
+                            else
+                            {
+                                <div class="user__info--img bg-img" style="background-image: url(../../Assets/Client/img/Candidate/user-default.png);"></div>
+                            }
+
+                            <div class="user__info--name"><span>@userLogin.Name</span></div>
+                        </div>
+                        <ul class="user__groups">
+                            <li><a href="@Url.Action("Info", "Home")">Thông tin cá nhân</a></li>
+                            <li><a href="@Url.Action("DoiMatKhau","Home")">Đổi mật khẩu</a></li>
+                            <li><a href="@Url.Action("DaLuu", "Recruitment")">Tin tuyển dụng đã lưu</a></li>
+                            <li><a href="@Url.Action("Index", "UngTuyen")">Lịch sử ứng tuyển</a></li>
+                            <li><a href="@Url.Action("PhuHop", "Recruitment")">Việc làm phù hợp</a></li>
+                            <li>@Html.ActionLink("Đăng xuất", "Logout", "Home")</li>
+                        </ul>
+                    </div>
+                }
+                else
+                {
+            <div class="header__navbar--login">
+                <div class="header__register--item">
+                    <a id="btn-register" href="javascript:void(0)">Đăng ký</a>
+                </div>
+                <div class="header__login--item">
+                    <a id="btn-login" href="javascript:void(0)">Đăng nhập</a>
+                </div>
+                <div class="header__login--item employer">
+                    <a href="@Url.Action("Index", "Login", new { Area = "NhaTuyenDung" })">NHÀ TUYỂN DỤNG</a>
+                </div>
+            </div>
+                }
+
+            </nav>
+
+            <!-- Navbar Mobile -->
+            <div class="header__icon--bars">
+                <div class="fas fa-bars"></div>
+            </div>
+
+            <div class="header__navbar--menu">
+                <div class="header__navbar--close">
+
+                </div>
+                <div class="header__navbar__content">
+                    <ul class="header__navbar--description">
+                        <li class="header__navbar--item-mb">
+                            <a href="">Trang chủ</a>
+                        </li>
+                        <li class="header__navbar--item-mb">
+                            <a href="">Hồ sơ & CV</a>
+                        </li>
+                        <li class="header__navbar--item-mb">
+                            <a href="">Bài viết</a>
+                        </li>
+                        <li class="header__navbar--item-mb">
+                            <a href="">Góp ý - Phản hồi</a>
+                        </li>
+                        <li class="header__navbar--item-mb">
+                            <a href="">Đăng nhập</a>
+                        </li>
+                        <li class="header__navbar--item-mb">
+                            <a href="">Nhà tuyển dụng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <div class="main">
+
+            @if (TempData["Notify"] != null)
+            {
+                <div id="msgAlert" class="alert @TempData["AlertType"]" role="alert">
+                    @TempData["Notify"]
+                </div>
+            }
+
+            @RenderBody()
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="footer__wrapper">
+                <div class="footer__wrapper--container grid wide">
+                    <div class="footer__content row">
+                        <div class="footer__item col l-2-4 m-4 c-6">
+                            <div class="footer__item--container">
+                                <h2 class="footer__item--name">Công việc</h2>
+                                <ul class="footer__item--content">                              
+                                    <li class="footer__content--item"><a href="@Url.Action("About","Home")">Giới thiệu</a></li>
+                                    <li class="footer__content--item"><a href="">Liên hệ hợp tác</a></li>
+                                    <li class="footer__content--item"><a href="">Điều kiện sử dụng</a></li>
+                                    <li class="footer__content--item"><a href="">Chính sách bảo mật</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__item col l-2-4 m-4 c-6">
+                            <h2 class="footer__item--name">Dịch vụ</h2>
+                            <ul class="footer__item--content">
+                                <li class="footer__content--item"><a href="">Hồ sơ của tôi</a></li>
+                                <li class="footer__content--item"><a href="">Tìm việc làm</a></li>
+                                <li class="footer__content--item"><a href="">Bí quyết tìm việc</a></li>
+                                <li class="footer__content--item"><a href="">Quản lý CV của bạn</a></li>
+                                <li class="footer__content--item"><a href="">Tuyển dụng nhân sự</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__item col l-2-4 m-4 c-6">
+                            <h2 class="footer__item--name">Hotline</h2>
+                            <h1 class="footer__item--hotline"><a href="tel:0847238848">0847 238 848</a></h1>
+                            <div class="footer__link--list">
+                                <a href="" title="Follow on Facebook" class="footer__link--fb"><i class="fab fa-facebook-f"></i></a>
+                                <a href="" title="Follow on Twitter" class="footer__link--twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="" title="Follow on Youtube" class="footer__link--ytb"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer__item col c-flex">
+                            <div class="footer__content--form">
+                                <h2 class="footer__item--name">Đăng ký nhận thông tin</h2>
+                                <form action="/" method="get">
+                                    <div class="footer__form--name">
+                                        <input class="input__name" name="name" type="text" placeholder="Họ và tên">
+                                    </div>
+                                    <div class="footer__form--phone">
+                                        <input type="text" class="input__phone" name="phone" placeholder="Số điện thoại">
+                                    </div>
+                                    <button class="footer__form--submit button--link" type="submit">Đăng ký ngay</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__wrapper--copyright">
+                <div class="footer__copyright--content">
+                    Copyright  &copy;Website tuyển dụng - 2022
+                </div>
+            </div>
+        </footer>
+        <div class="icon__scroll">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <script>
+        setTimeout(function () {
+            $("#msgAlert").fadeOut("slow");
+        }, 2000);
+    </script>
+    @RenderSection("scripts_Main", required: false)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js" integrity="sha512-DedNBWPF0hLGUPNbCYfj8qjlEnNE92Fqn7xd3Sscfu7ipy7Zu33unHdugqRD3c4Vj7/yLv+slqZhMls/4Oc7Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

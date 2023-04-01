@@ -1,0 +1,44 @@
+﻿@model DoAn2023.Models.ViewModels.BaiViet.BaiVietVm
+
+@{
+    ViewBag.Title = Model.TenBaiViet;
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Client/css/baiViet.css">
+}
+
+<div class="main__fixed bg-img"></div>
+
+<div class="main__blogs">
+    <div class="grid wide">
+        <div class="main__blogs--content row">
+            <div class="col l-12">
+                <h1 class="main__blogs--title main__item--title">
+                    @Model.TenBaiViet
+                </h1>
+                <div class="blogs__header">
+                    <div>
+                        Tác giá: <strong class="mr-2">@Model.TenTacGia</strong>
+                    </div>
+                    <div>
+                        Ngày đăng: <i>@Model.ThoiGian</i>
+                    </div>
+                </div>
+                <div style="text-align: right">
+                    <i>Lượt xem: @Model.LuotXem</i>
+                </div>
+                <div class="blogs_img-main">
+                    <img src="@Model.AnhChinh" />
+                </div>
+                <div>
+                    @Html.Raw(Model.NoiDung)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

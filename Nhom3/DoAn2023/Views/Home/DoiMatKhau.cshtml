@@ -1,0 +1,72 @@
+﻿@model DoAn2023.Models.ViewModels.User.UserPassword
+
+@{
+    ViewBag.Title = "Đổi mật khẩu";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Admin/css/bootstrap.min.css" />
+}
+
+<div class="main__content">
+    <div class="main__content--wrapper grid wide">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header py-2">
+                            <h4 class="header-title mb-0">Thay đổi mật khẩu</h4>
+                        </div>
+                        <div class="collapse show">
+                            <div class="col-md-12 p-0">
+                                <br />
+                                @using (Html.BeginForm("DoiMatKhau", "Home", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="form-group align-items-center row">
+                                        @Html.LabelFor(model => model.MatKhauCu, "Mật khẩu cũ*:", new { @class = "control-label col-md-3" })
+                                        <div class="col-md-8">
+                                            @Html.TextBoxFor(model => model.MatKhauCu, new { @class = "form-control", @type = "password", @autocomplete = "false", @placeholder = "Nhập mật khẩu" })
+                                            @Html.ValidationMessageFor(model => model.MatKhauCu, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group align-items-center row">
+                                        @Html.LabelFor(model => model.MatKhauMoi, "Mật khẩu mới*:", new { @class = "control-label col-md-3" })
+                                        <div class="col-md-8">
+                                            @Html.TextBoxFor(model => model.MatKhauMoi, new { @class = "form-control", @type = "password", @autocomplete = "false", @placeholder = "Nhập mật khẩu" })
+                                            @Html.ValidationMessageFor(model => model.MatKhauMoi, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group align-items-center row">
+                                        @Html.LabelFor(model => model.XN_MatKhau, "Nhập lại mật khẩu*:", new { @class = "control-label col-md-3" })
+                                        <div class="col-md-8">
+                                            @Html.TextBoxFor(model => model.XN_MatKhau, new { @class = "form-control", @type = "password", @autocomplete = "false", @placeholder = "Nhập lại mật khẩu" })
+                                            @Html.ValidationMessageFor(model => model.XN_MatKhau, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mt-2">
+                                        @Html.ValidationSummary(true, null, new { @class = "error text-danger" })
+                                    </div>
+
+                                    <div class="form-group align-items-center row mt-3">
+                                        <div class="col-md-3">
+                                            @Html.ActionLink("Trở về", "Index", "Home", null, new { @class = "btn btn-light" })
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <input type="submit" value="Cập nhật" class="btn btn-primary" />
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

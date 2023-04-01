@@ -1,0 +1,124 @@
+﻿@model DoAn2023.Models.ViewModels.HoSoXinViec.HoSoXinViecFull
+
+@{
+    ViewBag.Title = "Hồ sơ " + Model.TenHoSo;
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Admin/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/Client/css/HoSo/style.css">
+}
+
+<div class="main__content">
+    <div class="grid wide">
+        <div class="container-fluid overcover">
+            <div class="container profile-box">
+                <div class="row">
+                    <div class="col-md-4 left-co">
+                        <div class="left-side">
+                            <div class="profile-info">
+                                <img src="@(Model.AnhDaiDien != null ? Model.AnhDaiDien : "~/Assets/Client/img/Candidate/user-default.png")" style="height: 250px; object-fit: cover;" title="Ảnh 3x4" alt="Ảnh chính">
+                                <h3>@Model.TenUngVien</h3>
+                                <span>@Model.CapBac @Model.ChuyenNganh</span>
+                            </div>
+                            <h4 class="ltitle">Thông tin liên hệ</h4>
+                            <div class="contact-box pb0">
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <div class="detail">
+                                    @Model.NgaySinh
+                                </div>
+                            </div>
+                            <div class="contact-box pb0">
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="detail">
+                                    @Model.SoDienThoai
+                                </div>
+                            </div>
+                            <div class="contact-box pb0">
+                                <div class="icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="detail">
+                                    @Model.Email
+                                </div>
+                            </div>
+                            <div class="contact-box pb0">
+                                <div class="icon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                <div class="detail">
+                                    @Model.GioiTinh
+                                </div>
+                            </div>
+                            <div class="contact-box">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="detail">
+                                    @Model.DiaChi
+                                </div>
+                            </div>
+                            <h4 class="ltitle">Sở thích</h4>
+                            <ul class="hoby row no-margin">
+                                <li><i class="fas fa-pencil-alt"></i> <br> Đọc sách</li>
+                                <li><i class="fas fa-bicycle"></i> <br> Đạp xe</li>
+                                <li><i class="fas fa-futbol"></i> <br> Bóng đá</li>
+                                <li><i class="fas fa-film"></i><br> Xem phim</li>
+                                <li><i class="fas fa-plane-departure"></i> <br>Du lịch</li>
+                                <li><i class="fas fa-gamepad"></i> <br> Game</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8 rt-div">
+                        <div class="rit-cover">
+                            <div class="hotkey">
+                                <h1 class="">@Model.TenUngVien </h1>
+                                <small>@Model.CapBac @Model.ChuyenNganh (@Model.LoaiCV)</small>
+                            </div>
+                            <h2 class="rit-titl"><i class="far fa-user"></i> Mục tiêu nghề nghiệp</h2>
+                            <div class="about">
+                                @Html.Raw(Model.MucTieuNgheNghiep)
+                            </div>
+
+                            <h2 class="rit-titl"><i class="fas fa-briefcase"></i> Kinh nghiệm làm việc</h2>
+                            <div class="work-exp">
+                                @Html.Raw(Model.KinhNghiem)
+                            </div>
+
+                            <h2 class="rit-titl"><i class="fas fa-graduation-cap"></i> Học vấn</h2>
+                            <div class="education">
+                                @Html.Raw(Model.HocVan)
+                            </div>
+
+                            <div class="col-md-6">
+                                <h2 class="rit-titl"><i class="fas fa-users-cog"></i> Kỹ năng</h2>
+                                <div class="profess-cover row no-margin">
+                                    @Html.Raw(Model.KyNang)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <h2 class="rit-titl"><i class="fas fa-users-cog"></i> Kỹ năng mềm</h2>
+                                <div class="profess-cover row no-margin">
+                                    @Html.Raw(Model.KyNangMem)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <h2 class="rit-titl"><i class="fas fa-users-cog"></i> Giải thưởng</h2>
+                                <div class="profess-cover row no-margin">
+                                    @Html.Raw(Model.GiaiThuong)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

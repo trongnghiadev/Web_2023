@@ -1,0 +1,228 @@
+/* Main */
+.main {
+    position: relative;
+}
+
+.main__fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background-image: url(../img/bg-seccity.jpg);
+    background-attachment: fixed;
+}
+
+/* Main Search */
+.main__search {
+    padding: 10px 0 5px 0;
+}
+
+/* Main result */
+.main_result {
+    margin-top: 20px;
+}
+
+.main__result--wrapper {
+    padding: 20px 0;
+}
+
+.main__result--header {
+    list-style: none;
+    display: flex;
+}
+
+.main__result--header > li:first-child > a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.main__result--header > li:first-child > a:hover {
+    text-decoration: underline;
+    color: var(--text-hover);
+}
+
+.main__result--header > li:first-child::after {
+    content: '>';
+    font-size: 15px;
+    margin: 0 15px 0 10px;
+}
+
+.result__header--title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.main__result--total {
+    margin-top: 20px;
+}
+
+.result__total--content {
+    padding: 15px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #666;
+    background-color: var(--white-color);
+}
+
+.result__total--content > span {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.main__result--wrapper {
+    padding: 20px 0;
+}
+
+.main__item--title {
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.main__result--title {
+    margin-bottom: 20px;
+}
+
+.result__item {
+    padding-bottom: 10px;
+}
+
+.result__item--wrapper {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    display: flex;
+    padding: 8px 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%), 
+                0 6px 20px 0 rgb(0 0 0 / 6%);
+}
+
+.result__item--wrapper:hover {
+    background-color: var(--bg-hover);
+}
+
+.result__item--img img {
+    width: 90px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.result__item--time {
+    margin-top: 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--white-color);
+    background-color: var(--bg-text-color);
+    text-align: center;
+    line-height: 25px;
+}
+
+.result__item--name {
+    flex: 1;
+    padding: 0 10px 0px 15px;
+}
+
+.result__name--title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 0px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.result__name--save > a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.result__name--save:hover > a {
+    color: rgb(255, 0, 0, 0.8);
+}
+
+.result__name--link {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.result__name--link:hover {
+    text-decoration: underline;
+    color: var(--text-hover);
+}
+
+.result__employer--link {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.result__employer--link:hover {
+    color: var(--text-hover);
+}
+
+.result__icon {
+    color: var(--text-hover);
+    width: 20px;
+    display: inline-block;
+}
+
+.result__date {
+    display: inline-flex;
+}
+
+.result__date--start {
+    margin-right: 30px;
+}
+
+.main__result--spotlight > .interested{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+    width: 100%;
+}
+
+.result__spotlight--title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: -1px -1px 2px rgb(0, 0, 0, 0.1),
+                1px -1px 2px rgb(0, 0, 0, 0.1);
+}
+
+.result__spotlight--item .result__item--img > img {
+    width: 75px;
+    height: 80px;
+}
+
+.result__paging--list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 22px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.result__paging--list li {
+    background-color: #fff;
+    padding: 6px 12px;
+    border: 1px solid #dee2e6;
+    text-decoration: none;
+}
+
+.result__paging--list li.active {
+    background-color: var(--primary-color);
+}
+
+.result__paging--list li.active a {
+    color: var(--white-color);
+    font-weight: 500;
+}

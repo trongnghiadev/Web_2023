@@ -1,0 +1,53 @@
+﻿@model DoAn2023.Models.ViewModels.HoSoXinViec.HoSoXinViecSearch
+
+@{
+    ViewBag.Title = "Ứng viên phù hợp với bạn";
+    ViewBag.PrevPage = "Ứng viên";
+    ViewBag.CurrentPage = "Đề xuất ứng viên phù hợp";
+    Layout = "~/Areas/NhaTuyenDung/Views/Shared/_LayoutEmployer.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Client/css/search.css">
+}
+
+@section scripts {
+
+    <script src="~/Assets/Client/js/Employer/timHoSo.js"></script>
+    <script>
+        load(null, 1, "@Model.CapBac", "@Model.ChuyenNganh", "@Model.LoaiCV");
+    </script>
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header py-2">
+                    <h4 class="header-title mb-0">Ứng viên phù hợp với bạn</h4>
+                </div>
+                <div class="mt-3">
+                    <div class="result__total">
+
+                    </div>
+                    <div class="row result__list--search">
+
+                    </div>
+                    <div class="main__result--paging">
+                        <ul class="result__paging--list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

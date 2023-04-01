@@ -1,0 +1,332 @@
+D:\Web\ASP.NET MVC\DoAn2023\bin\DoAn2023.dll.config
+D:\Web\ASP.NET MVC\DoAn2023\bin\DoAn2023.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\DoAn2023.pdb
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\csc.exe
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\csc.exe.config
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\csc.rsp
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\csi.exe
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\csi.exe.config
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\csi.rsp
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.AppContext.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Collections.Immutable.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Console.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Globalization.Calendars.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.IO.Compression.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.IO.FileSystem.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Net.Http.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Net.Sockets.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Reflection.Metadata.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.ValueTuple.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Xml.XPath.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\vbc.exe
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\vbc.exe.config
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\vbc.rsp
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\VBCSCompiler.exe
+D:\Web\ASP.NET MVC\DoAn2023\bin\roslyn\VBCSCompiler.exe.config
+D:\Web\ASP.NET MVC\DoAn2023\bin\Antlr3.Runtime.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\Microsoft.Web.Infrastructure.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\Newtonsoft.Json.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.Helpers.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.Mvc.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.Optimization.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.Razor.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.WebPages.Deployment.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.WebPages.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.WebPages.Razor.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\WebGrease.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.Helpers.xml
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.Mvc.xml
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.Optimization.xml
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.Razor.xml
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.WebPages.xml
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.WebPages.Deployment.xml
+D:\Web\ASP.NET MVC\DoAn2023\bin\System.Web.WebPages.Razor.xml
+D:\Web\ASP.NET MVC\DoAn2023\bin\Newtonsoft.Json.xml
+D:\Web\ASP.NET MVC\DoAn2023\bin\Antlr3.Runtime.pdb
+D:\Web\ASP.NET MVC\DoAn2023\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Web\ASP.NET MVC\DoAn2023\obj\Debug\DoAn2023.csproj.AssemblyReference.cache
+D:\Web\ASP.NET MVC\DoAn2023\obj\Debug\DoAn2023.csproj.CoreCompileInputs.cache
+D:\Web\ASP.NET MVC\DoAn2023\obj\Debug\DoAn2023.csproj.CopyComplete
+D:\Web\ASP.NET MVC\DoAn2023\obj\Debug\DoAn2023.dll
+D:\Web\ASP.NET MVC\DoAn2023\obj\Debug\DoAn2023.pdb
+D:\Web\ASP.NET MVC\DoAn2023\bin\EntityFramework.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\EntityFramework.SqlServer.dll
+D:\Web\ASP.NET MVC\DoAn2023\bin\EntityFramework.xml
+D:\Web\ASP.NET MVC\DoAn2023\bin\EntityFramework.SqlServer.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\DoAn2023.dll.config
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\DoAn2023.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\DoAn2023.pdb
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\csc.exe
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\csc.exe.config
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\csc.rsp
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\csi.exe
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\csi.exe.config
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\csi.rsp
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.AppContext.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Collections.Immutable.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Console.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Globalization.Calendars.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.IO.Compression.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.IO.FileSystem.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Net.Http.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Net.Sockets.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Reflection.Metadata.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.ValueTuple.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Xml.XPath.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\vbc.exe
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\vbc.exe.config
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\vbc.rsp
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\VBCSCompiler.exe
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\roslyn\VBCSCompiler.exe.config
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\Antlr3.Runtime.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\EntityFramework.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\EntityFramework.SqlServer.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\Microsoft.Web.Infrastructure.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\Newtonsoft.Json.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.Helpers.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.Mvc.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.Optimization.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.Razor.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.WebPages.Deployment.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.WebPages.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.WebPages.Razor.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\WebGrease.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\EntityFramework.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\EntityFramework.SqlServer.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.Helpers.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.Mvc.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.Optimization.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.Razor.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.WebPages.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.WebPages.Deployment.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\System.Web.WebPages.Razor.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\Newtonsoft.Json.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\Antlr3.Runtime.pdb
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\obj\Debug\DoAn2023.csproj.CoreCompileInputs.cache
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\obj\Debug\DoAn2023.csproj.CopyComplete
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\obj\Debug\DoAn2023.dll
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\obj\Debug\DoAn2023.pdb
+D:\Web\ASP.NET MVC\DoAn2023\DoAn2023\obj\Debug\DoAn2023.csproj.AssemblyReference.cache
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\DoAn2023.dll.config
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\DoAn2023.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\DoAn2023.pdb
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\csc.exe
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\csc.exe.config
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\csc.rsp
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\csi.exe
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\csi.exe.config
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\csi.rsp
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.AppContext.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Collections.Immutable.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Console.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Globalization.Calendars.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.IO.Compression.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.IO.FileSystem.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Net.Http.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Net.Sockets.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Reflection.Metadata.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.ValueTuple.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Xml.XPath.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\vbc.exe
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\vbc.exe.config
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\vbc.rsp
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\VBCSCompiler.exe
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\roslyn\VBCSCompiler.exe.config
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\Antlr3.Runtime.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\EntityFramework.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\EntityFramework.SqlServer.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\Microsoft.Web.Infrastructure.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\Newtonsoft.Json.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.Helpers.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.Mvc.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.Optimization.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.Razor.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.WebPages.Deployment.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.WebPages.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.WebPages.Razor.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\WebGrease.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\EntityFramework.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\EntityFramework.SqlServer.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.Helpers.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.Mvc.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.Optimization.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.Razor.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.WebPages.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.WebPages.Deployment.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\System.Web.WebPages.Razor.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\Newtonsoft.Json.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\Antlr3.Runtime.pdb
+D:\Đồ Án\Code\DoAn2023\DoAn2023\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Đồ Án\Code\DoAn2023\DoAn2023\obj\Debug\DoAn2023.csproj.AssemblyReference.cache
+D:\Đồ Án\Code\DoAn2023\DoAn2023\obj\Debug\DoAn2023.csproj.CoreCompileInputs.cache
+D:\Đồ Án\Code\DoAn2023\DoAn2023\obj\Debug\DoAn2023.csproj.CopyComplete
+D:\Đồ Án\Code\DoAn2023\DoAn2023\obj\Debug\DoAn2023.dll
+D:\Đồ Án\Code\DoAn2023\DoAn2023\obj\Debug\DoAn2023.pdb
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\DoAn2023.dll.config
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\DoAn2023.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\DoAn2023.pdb
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\csi.exe.config
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Console.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Net.Http.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\WebGrease.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\obj\Debug\DoAn2023.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\obj\Debug\DoAn2023.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\obj\Debug\DoAn2023.csproj.CopyComplete
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\obj\Debug\DoAn2023.dll
+C:\Users\Admin\Desktop\DoAn2023\DoAn2023\obj\Debug\DoAn2023.pdb

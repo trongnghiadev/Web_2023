@@ -1,0 +1,72 @@
+﻿@model DoAn2023.Models.ViewModels.BaiViet.BaiVietCreate
+
+@{
+    ViewBag.Title = "Đăng bài viết mới";
+    ViewBag.PrevPage = "Bài viết";
+    ViewBag.CurrentPage = "Tạo bài viết";
+    Layout = "~/Areas/NhaTuyenDung/Views/Shared/_LayoutEmployer.cshtml";
+}
+
+@section scripts {
+    <script src="~/Assets/Plugins/ckeditor/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace("txtNoiDung");
+    </script>
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header py-2">
+                    <h4 class="header-title mb-0">Tạo bài viết</h4>
+                </div>
+                <div class="collapse pt-3 show">
+                    @using (Html.BeginForm("Create", "BaiViet", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group align-items-center row">
+                                @Html.LabelFor(model => model.TenBaiViet, "Tên bài viết", new { @class = "control-label col-md-2" })
+                                <div class="col-md-6">
+                                    @Html.TextAreaFor(model => model.TenBaiViet, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.TenBaiViet, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group align-items-center row">
+                                @Html.LabelFor(model => model.AnhChinh, "Ảnh chính", new { @class = "control-label col-md-2" })
+                                <div class="col-md-6">
+                                    <input name="Image" type="file" accept="image/*" />
+                                </div>
+                            </div>
+
+                            <div class="form-group align-items-center row">
+                                @Html.LabelFor(model => model.NoiDung, "Nội dung", new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.TextAreaFor(model => model.NoiDung, new { @class = "form-control", id = "txtNoiDung" })
+                                    @Html.ValidationMessageFor(model => model.NoiDung, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group align-items-center row mt-3">
+                                <div class="col-md-2">
+                                    @Html.ActionLink("Trở về", "Index", "BaiViet", null, new { @class = "btn btn-light" })
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="submit" value="Tạo mới" class="btn btn-primary" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

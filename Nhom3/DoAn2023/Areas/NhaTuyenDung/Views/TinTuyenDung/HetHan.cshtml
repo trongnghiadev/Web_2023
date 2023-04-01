@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Tin tuyển dụng hết hạn";
+    ViewBag.PrevPage = "Tin tuyển dụng";
+    ViewBag.CurrentPage = "Đã hết hiển thị";
+    Layout = "~/Areas/NhaTuyenDung/Views/Shared/_LayoutEmployer.cshtml";
+}
+
+
+@section scripts {
+    <script src="~/Assets/Client/js/Employer/tinTuyenDungHetHan.js"></script>
+    <script src="~/Assets/Admin/js/common.js"></script>
+}
+
+<div class="row">
+    <div class="col-xl-12">
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-widgets py-2">
+                    <a href="javascript: void(0);" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
+                    <a data-toggle="collapse" href="#cardCollpase5" role="button" aria-expanded="false" aria-controls="cardCollpase5"><i class="mdi mdi-minus"></i></a>
+                </div>
+
+
+                <div class="card-header py-2">
+                    <h4 class="header-title mb-0">Danh sách tin tuyển dụng</h4>
+                </div>
+
+                <div id="cardCollpase5" class="collapse pt-3 show">
+                    <div class="row my-1">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="dataTables_filter">
+                                <label>
+                                    Hiện <select id="selection-datatable_length" name="selection-datatable_length" aria-controls="selection-datatable" class="custom-select custom-select-sm form-control form-control-sm">
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                    </select> mục / trang
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="dataTables_filter text-right">
+                                <label>
+                                    Tìm kiếm:
+                                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="selection-datatable" id="txtsearch">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-centered mb-0" id="datatablesSimple">
+                            <thead>
+                                <tr>
+                                    <th>Mã tin</th>
+                                    <th>Tên công việc</th>
+                                    <th>Số lượng tuyển</th>
+                                    <th>Ngày đăng</th>
+                                    <th>Hạn nộp</th>
+                                    <th>Lượt xem</th>
+                                    <th>Trạng thái</th>
+                                    <th>Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row align-items-center mt-2">
+                        <div class="col-sm-12 col-md-5">
+                            <div class="dataTables_info" id="selection-datatable_info" role="status" aria-live="polite"></div>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <div class="dataTables_paginate paging_simple_numbers" id="selection-datatable_paginate">
+                                <ul class="pagination pagination-rounded m-0 justify-content-end" id="load-pagination">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

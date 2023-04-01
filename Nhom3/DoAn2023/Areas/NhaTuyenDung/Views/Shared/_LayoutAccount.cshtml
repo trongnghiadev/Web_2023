@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Tuyển dụng CNTT</title>
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Assets/Client/css/grid.css">
+    <link rel="stylesheet" href="~/Assets/Client/css/base.css">
+    <link rel="stylesheet" href="~/Assets/Client/css/dangnhap.css">
+    <link rel="stylesheet" href="~/Assets/Client/css/response.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header" id="header">
+            <div class="header__logo">
+                <a href="/" class="header__logo--link">
+                    <img src="~/Assets/Client/img/logo.jpg" />
+                </a>
+            </div>
+            <nav class="header__navbar">
+                <div class="header__navbar--name">
+                    Nhà tuyển dụng
+                </div>
+                <div class="header__navbar--login">
+                    <div class="header__login--item">
+                        @Html.ActionLink("Đăng nhập", "Index", "Login", new { }, new { @id = "btn-login" })
+                    </div>
+                    <div class="header__login--item">
+                        @Html.ActionLink("Đăng ký", "Register", "Login", new { }, new { @id = "btn-register" })
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div class="main__fixed bg-img"></div>
+        @if (TempData["Notify"] != null)
+        {
+            <div id="msgAlert" class="alert @TempData["AlertType"]" role="alert">
+                @TempData["Notify"]
+            </div>
+        }
+        @RenderBody()
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")   
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        setTimeout(function () {
+            $("#msgAlert").fadeOut("slow");
+        }, 2000);
+    </script>
+</body>
+</html>

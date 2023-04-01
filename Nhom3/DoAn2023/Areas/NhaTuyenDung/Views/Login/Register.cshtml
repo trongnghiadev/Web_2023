@@ -1,0 +1,62 @@
+﻿@model DoAn2023.Models.ViewModels.Employer.RegisterModel
+
+@{
+    ViewBag.Title = "Đăng ký nhà tuyển dụng";
+    Layout = "~/Areas/NhaTuyenDung/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div class="main__login">
+    <div class="main__login--wrapper">
+        <div class="main__login--title">
+            <h4>Đăng ký tài khoản</h4>
+        </div>
+        <div class="main__login--content">
+            @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, null, new { @class = "error text-danger" })
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.Company_Name)
+                    @Html.TextBoxFor(model => model.Company_Name, new { @placeholder = "Nhập tên công ty/tổ chức" })
+                    @Html.ValidationMessageFor(model => model.Company_Name, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.Email)
+                    @Html.TextBoxFor(model => model.Email, new { @placeholder = "Ưu tiên email công ty" })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.Phone)
+                    @Html.TextBoxFor(model => model.Phone, new { @placeholder = "Nhập số điện thoại" })
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.Name)
+                    @Html.TextBoxFor(model => model.Name, new { @placeholder = "Nhập tên người liên hệ" })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.Address)
+                    @Html.TextBoxFor(model => model.Address, new { @placeholder = "Nhập địa chỉ công ty" })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.Password)
+                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @type = "password", @autocomplete = "false", @placeholder = "Nhập mật khẩu" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.Pasword_Confirm)
+                    @Html.TextBoxFor(model => model.Pasword_Confirm, new { @class = "form-control", @type = "password", @autocomplete = "false", @placeholder = "Nhập lại mật khẩu" })
+                    @Html.ValidationMessageFor(model => model.Pasword_Confirm, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    <button class="form__input--submit" type="submit">Đăng ký</button>
+                </div>
+            }
+        </div>
+        <div class="main__login--note">
+            <p>Bạn chưa có tài khoản? <strong>@Html.ActionLink("Đăng nhập ngay", "Index", "Login", new { }, new { @id = "link-login"})</strong></p>
+        </div>
+    </div>
+</div>

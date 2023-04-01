@@ -1,0 +1,134 @@
+﻿@using DoAn2023.Models.ViewModels.User;
+@using DoAn2023.Common;
+
+@{
+
+    var userLogin = (UserLogin)Session[CommonConstants.EMPLOYER_SESSION];
+    var baiVietChuaDuyet = (int)ViewBag.BaiVietChuaDuyet;
+    var tinChuaDuyet = (int)ViewBag.SlTinChoDuyet;
+}
+
+<div id="sidebar-menu">
+
+    <ul class="metismenu" id="side-menu">
+
+        <li class="menu-title">Nhà tuyển dụng</li>
+
+        <li>
+            <a href="@Url.Action("Index","Home")" class="waves-effect">
+                <i class="remixicon-dashboard-line"></i>
+                <!-- <span class="badge badge-pink badge-pill float-right">2</span> -->
+                <span> Bảng tin </span>
+                <span class="menu-arrow"></span>
+            </a>
+        </li>
+
+        <li>
+            <a href="javascript: void(0);" class="waves-effect active">
+                <i class="remixicon-stack-line"></i>
+                <span> Tin tuyển dụng </span>
+                @if (tinChuaDuyet > 0)
+                {
+                    <span class="badge badge-pink badge-pill float-right">@tinChuaDuyet</span>
+                }
+                else
+                {
+                    <span class="menu-arrow"></span>
+                }
+            </a>
+            <ul class="nav-second-level" aria-expanded="false">
+                <li>
+                    <a href="@Url.Action("Index","TinTuyenDung")">Đang hiển thị</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("ChoDuyet","TinTuyenDung")">
+                        @if (tinChuaDuyet > 0)
+                        {
+                            <span class="badge badge-pink badge-pill float-right">@tinChuaDuyet</span>
+                        }
+                        <span>Đang xét duyệt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("HetHan","TinTuyenDung")">Hết hạn ứng tuyển</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Create","TinTuyenDung")">Đăng tin mới</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript: void(0);" class="waves-effect">
+                <i class="remixicon-layout-line"></i>
+                <span> Danh sách ứng tuyển </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <ul class="nav-second-level" aria-expanded="false">
+                <li>
+                    <a href="@Url.Action("Index", "UngTuyen")">Tất cả</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("ChuaXem","UngTuyen")">Chưa xem</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript: void(0);" class="waves-effect">
+                <i class="remixicon-mail-open-line"></i>
+                <span> Bài viết </span>
+                @if (baiVietChuaDuyet > 0)
+                {
+                    <span class="badge badge-pink badge-pill float-right">@baiVietChuaDuyet</span>
+                }
+                else
+                {
+                    <span class="menu-arrow"></span>
+                }
+            </a>
+            <ul class="nav-second-level" aria-expanded="false">
+                <li>
+                    <a href="@Url.Action("Index","BaiViet")">Bài viết của bạn</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("ChoDuyet","BaiViet")" class="waves-effect">
+                        @if (baiVietChuaDuyet > 0)
+                        {
+                            <span class="badge badge-pink badge-pill float-right">@baiVietChuaDuyet</span>
+                        }
+                        <span> Bài viết chờ duyệt </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Create","BaiViet")">Đăng bài viết</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript: void(0);" class="waves-effect">
+                <i class="remixicon-pages-line"></i>
+                <span> Ứng viên </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <ul class="nav-second-level" aria-expanded="false">
+                <li>
+                    <a href="@Url.Action("TimUngVien", "UngTuyen")">Tìm ứng viên</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("DeXuat","UngTuyen")">Đề xuất ứng viên phù hợp</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="/cong-ty/@(StringHelper.ToUnsignString(userLogin.Name))-@userLogin.Id" target="_blank" class="waves-effect">
+                <i class="remixicon-pages-line"></i>
+                <span> Xem trang thông tin </span>
+                <span class="menu-arrow"></span>
+            </a>
+        </li>
+    </ul>
+
+</div>

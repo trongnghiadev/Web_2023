@@ -1,0 +1,82 @@
+﻿@model DoAn2023.Models.ViewModels.User.UserCreate
+
+@{
+    ViewBag.Title = "Tạo tài khoản mới";
+    ViewBag.PrevPage = "Quản lý tài khoản";
+    ViewBag.CurrentPage = "Tạo tài khoản";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header py-2">
+                    <h4 class="header-title mb-0">Tạo tài khoản mới</h4>
+                </div>
+                <div class="collapse pt-3 show">
+                    @using (Html.BeginForm("Create", "User", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group align-items-center row">
+                            @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+                            <div class="col-md-6">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group align-items-center row">
+                            @Html.LabelFor(model => model.Password, "Mật khẩu", new { @class = "control-label col-md-2" })
+                            <div class="col-md-6">
+                                @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group align-items-center row">
+                            @Html.LabelFor(model => model.Password_Confirm, "Nhập lại mật khẩu", new { @class = "control-label col-md-2" })
+                            <div class="col-md-6">
+                                @Html.PasswordFor(model => model.Password_Confirm, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Password_Confirm, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group align-items-center row">
+                            @Html.LabelFor(model => model.idQuyen, "Quyền", new { @class = "control-label col-md-2" })
+                            <div class="col-md-6">
+                                @Html.DropDownListFor(model => model.idQuyen, new SelectList(ViewBag.ListRole, "PK_iMaQuyen", "sTenQuyen"), new { @class = "form-control text-box single-line" })
+                            </div>
+                        </div>
+
+                        <div class="form-group align-items-center row">
+                            @Html.LabelFor(model => model.TrangThai, "Trạng thái", new { @class = "control-label col-md-2" })
+                            <div class="col-md-6">
+                                @Html.DropDownListFor(model => model.TrangThai, new List<SelectListItem>()
+                                {
+                                    new SelectListItem() {Value = "true", Text = "Hoạt động"},
+                                    new SelectListItem() {Value = "false", Text = "Khóa tài khoản"}
+                                },
+                                new { @class = "form-control text-box single-line" })
+                            </div>
+                        </div>
+
+                        <div class="form-group align-items-center row mt-3">
+                            <div class="col-md-2">
+                                @Html.ActionLink("Trở về", "Index", "User", null, new { @class = "btn btn-light" })
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="submit" value="Tạo mới" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

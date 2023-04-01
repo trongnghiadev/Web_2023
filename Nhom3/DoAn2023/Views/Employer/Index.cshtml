@@ -1,0 +1,94 @@
+﻿@model DoAn2023.Models.ViewModels.Employer.EmployerEditClient
+
+@{
+    ViewBag.Title = "Nhà tuyển dụng " + Model.TenNTD;
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" type="text/css" href="~/Assets/Client/css/nhatuyendung.css" />
+}
+
+@section scripts_Main {
+    <script src="~/Assets/Client/js/style.js"></script>
+    <script src="~/Assets/Client/js/nhatuyendung.js"></script>
+}
+
+<div class="main__wrapper grid wide">
+    <div class="main__image">
+        @if (Model.AnhBia != null)
+        {
+            <div class="main__image--conver bg-img" style="background-image: url(@Model.AnhBia);"></div>
+        }
+        else
+        {
+            <div class="main__image--conver bg-img" style="background-image: url(../../Assets/Client/img/cover-default.jpg);"></div>
+        }
+        <div class="main__image--avatar">
+            @if (Model.AnhDaiDien != null)
+            {
+                <img class="full_width" src="@Model.AnhDaiDien" alt="Ảnh đại diện">
+            }
+            else
+            {
+                <img class="full_width" src="~/Assets/Client/img/Candidate/user-default.png" alt="Ảnh đại diện">
+            }
+        </div>
+    </div>
+    <h1 class="main__company--name">@Model.TenNTD</h1>
+    <input id="MaNTD" type="hidden" value="@Model.MaNTD">
+    <div class="main__company">
+        <div class="main__company--introduce row">
+            <div class="company__introduce--info col c-8">
+                <div class="introduce__info--wrapper">
+                    <h2>Giới thiệu nhà tuyển dụng</h2>
+                    <p style="white-space: pre-line">
+                        @(Model.MoTa != null ? Model.MoTa : "Chưa cập nhật")
+                    </p>
+                    <h2>Việc làm cùng công ty</h2>
+
+                    <div class="introduce__employer--list">
+                       
+                    </div>
+
+                    <div class="main__result--paging">
+                        <ul class="result__paging--list">
+                            <li class="pager">
+                                <a href="#" data-page="1">‹</a>
+                            </li>
+                            <li class="active">
+                                <a href="#" data-page="1">1</a>
+                            </li>
+                            <li class="">
+                                <a href="#" data-page="2">2</a>
+                            </li>
+                            <li class="pager">
+                                <a href="#" data-page="1">›</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="company__introduce--address col c-4">
+                <div class="introduce__address--wrapper">
+                    <h2>Thông tin nhà tuyển dụng</h2>
+                    <ul class="company__introduce--list">
+                        <li>
+                            <strong>Website:</strong>
+                            <a href="@Model.Website" target="_blank">@(Model.Website != null ? Model.Website : "Chưa cập nhật")</a>
+                        </li>
+                        <li><strong>Quy mô: </strong>@(Model.QuyMo != null ? Model.QuyMo : "Chưa cập nhật")</li>
+                        <li><strong>Địa chỉ: </strong><span id="address">@Model.DiaChi</span></li>
+                    </ul>
+
+                    <h2>Bản đồ</h2>
+                    <div class="introduce__address--ggmap">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

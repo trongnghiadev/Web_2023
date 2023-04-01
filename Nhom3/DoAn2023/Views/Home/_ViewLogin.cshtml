@@ -1,0 +1,36 @@
+﻿@model DoAn2023.Models.ViewModels.TaiKhoan.LoginModel
+
+<div class="main__login">
+    <div class="main__login--wrapper" id="main__login">
+        <div class="main__login--title">
+            <h4>Đăng Nhập</h4>
+            <div class="login--close"></div>
+        </div>
+        <div class="main__login--content">
+            @using (Ajax.BeginForm("Index", "Home", new AjaxOptions { HttpMethod = "POST" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, null, new { @class = "error text-danger" })
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.UserName, "Email", null)
+                    @Html.TextBoxFor(model => model.UserName, new { id = "login_email", @placeholder = "Nhập email của bạn" })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.PassWord)
+                    @Html.TextBoxFor(model => model.PassWord, new { id = "login_password", @placeholder = "Nhập mật khẩu của bạn" })
+                    @Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
+
+                    @*<label for="login_password">Mật khẩu</label>
+                    <input type="password" id="login_password" name="login_password" placeholder="Nhập mật khẩu" autocomplete="false">*@
+                </div>
+                <div class="login__form--input">
+                    <button class="form__input--submit" type="submit">Đăng nhập</button>
+                </div>
+             }
+        </div>
+        <div class="main__login--note">
+            <p>Bạn chưa có tài khoản? <strong><a id="link-register" href="javascript:void(0)">Đăng ký ngay</a></strong></p>
+        </div>
+    </div>
+</div>

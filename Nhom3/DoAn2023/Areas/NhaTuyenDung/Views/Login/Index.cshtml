@@ -1,0 +1,39 @@
+﻿@model DoAn2023.Models.ViewModels.Employer.LoginModel
+
+@{
+    ViewBag.Title = "Đăng nhập nhà tuyển dụng";
+    Layout = "~/Areas/NhaTuyenDung/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div class="main__login">
+    <div class="main__login--wrapper">
+        <div class="main__login--title">
+            <h4>Đăng nhập dành cho <strong>Nhà tuyển dụng</strong></h4>
+        </div>
+        <div class="main__login--content">
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, null, new { @class = "error text-danger" })
+
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @autocomplete = "false", @placeholder = "Nhập email của bạn" })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    @Html.LabelFor(model => model.Password, new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @type = "password", @autocomplete = "false", @placeholder = "Nhập mật khẩu" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="login__form--input">
+                    <button class="form__input--submit" type="submit">Đăng nhập</button>
+                </div>
+            }
+        </div>
+        <div class="main__login--note">
+            <p>Bạn chưa có tài khoản? <strong>@Html.ActionLink("Đăng ký ngay", "Register", "Login", new { }, new { @id = "link-register" })</strong></p>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,114 @@
+﻿@using DoAn2023.Models.DAL
+@model DoAn2023.Models.ViewModels.TinTuyenDung.TinTuyenDungSearch
+
+@{
+    TinTuyenDungDAL dao = new TinTuyenDungDAL();
+    var listTTD = dao.GetListItemHot(5);
+
+    ViewBag.Title = "Việc làm phù hợp";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Client/css/search.css">
+}
+
+@section scripts_Main {
+    <script src="~/Assets/Client/js/style.js"></script>
+    <script src="~/Assets/Client/js/searchkey.js"></script>
+    <script src="~/Assets/Client/js/searchResult.js"></script>
+
+    <script>
+        load("/Recruitment/GetPaging", $('#keyword').val(), 1, $('#CapBac').val(), $('#DiaChi').val(), null, null, null);
+
+        $("body").on("click", ".result__paging--list li a", function (event) {
+            event.preventDefault();
+            var page = $(this).attr('data-page');
+            load("/Recruitment/GetPaging", $('#keyword').val(), page, $('#CapBac').val(), $('#DiaChi').val(), null, null, null);
+        });
+    </script>
+}
+
+<div class="main__fixed bg-img"></div>
+<div class="main__search">
+    <div class="main__search--wrapper grid wide">
+        @{ Html.RenderAction("_ViewSearch", "Home");}
+    </div>
+</div>
+
+<div class="main_result">
+    <div class="main__result--wrapper grid wide">
+        <ul class="main__result--header">
+            <li>
+                <a href="">Trang chủ</a>
+            </li>
+            <li>
+                <h1 class="result__header--title">Gợi ý việc làm phù hợp với bạn</h1>
+            </li>
+        </ul>
+        <div class="main__result--total">
+            <p class="result__total--content">
+
+            </p>
+            <div class="main__result--content row">
+                <div class="main__result--description col l-8">
+                    <div class="grid row result__list--search">
+
+                    </div>
+                    <div class="main__result--paging">
+                        <ul class="result__paging--list">
+                        </ul>
+                    </div>
+                </div>
+                <div class="main__result--spotlight col l-4">
+                    <div class="interested">
+                        <h3 class="result__spotlight--title">Có thể bạn quan tâm</h3>
+                        <div class="result__spotlight--list row">
+                            <div class="result__spotlight--item l-12">
+                                @foreach (var item in listTTD)
+                                {
+                                    <div class="result__item col l-12 m-6 c-12">
+                                        <div class="result__item--wrapper">
+                                            <div class="result__item--img">
+                                                <img class="full_width" src="@item.AnhDaiDien" alt="Logo nhà tuyển dụng">
+                                            </div>
+                                            <div class="result__item--name">
+                                                <h2 class="result__name--title">
+                                                    <a href="/tin-tuyen-dung/@item.TieuDeTTD-@item.MaTTD" class="result__name--link text-line-1">
+                                                        @item.TenCongViec
+                                                    </a>
+                                                </h2>
+                                                <div class="result__name--employer mb-5">
+                                                    <a href="/cong-ty/@item.TieuDeNTD-@item.MaNTD" class="result__employer--link text-line-1">
+                                                        <span class="result__icon"><i class="far fa-building"></i></span>
+                                                        <span class="">@item.TenNTD</span>
+                                                    </a>
+                                                </div>
+                                                <p class="result__salary mb-5">
+                                                    <span class="result__icon"><i class="fas fa-money-check-alt"></i></span>
+                                                    <span>@item.MucLuong</span>
+                                                </p>
+                                                <div class="result__date mb-5">
+                                                    <p class="result__date--end mb-0">
+                                                        <span class="result__icon"><i class="fa-regular fa-clock"></i></span>
+                                                        <span>@item.HanNop</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

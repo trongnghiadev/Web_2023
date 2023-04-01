@@ -1,0 +1,136 @@
+﻿@model DoAn2023.Models.ViewModels.UngVien.UngVienEditClient
+
+@{
+    ViewBag.Title = "Thông tin cá nhân";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section css_Main {
+    <link rel="stylesheet" href="~/Assets/Admin/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/Client/css/info.css">
+}
+
+@section scripts_Main {
+    <script src="~/Assets/Client/js/style.js"></script>
+    <script src="~/Assets/Client/js/info.js"></script>
+}
+
+
+<div class="main__fixed bg-img"></div>
+
+<div class="main__content">
+    <div class="main__content--wrapper grid wide">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header py-2">
+                            <h4 class="header-title mb-0">Thông tin cá nhân</h4>
+                        </div>
+                        <div class="collapse pt-3 show">
+                            @using (Html.BeginForm("Info", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-horizontal">
+                                    @Html.HiddenFor(model => model.MaUngVien)
+
+                                    <div class="form-group align-items-center row main__image">
+                                        <div class="col-md-12">
+                                            <label for="inputCover" class="lbImgBia">
+                                                @if (ViewBag.AnhBia != null)
+                                                {
+                                                    <img class="img_cover img-thumbnail img_cover" src="@ViewBag.AnhBia" alt="Ảnh bìa" />
+                                                }
+                                                else
+                                                {
+                                                    <img class="img_cover img-thumbnail img_cover" src="~/Assets/Client/img/Candidate/cover-default.jpg" alt="Ảnh bìa" />
+                                                }
+                                            </label>
+                                            <input type="file" id="inputCover" name="ImageCover" accept="image/*" hidden />
+                                        </div>
+                                        <div class="main_img-avt">
+                                            <label for="inputMain" class="lbImgMain">
+
+                                                @if (ViewBag.AnhDaiDien != null)
+                                                {
+                                                    <img class="img_main rounded-circle avatar-xl img-thumbnail img_main" src="@ViewBag.AnhDaiDien" alt="Ảnh đại diện" />
+                                                }
+                                                else
+                                                {
+                                                    <img class="img_main rounded-circle avatar-xl img-thumbnail img_main" src="~/Assets/Client/img/Candidate/user-default.png" alt="Ảnh đại diện" />
+                                                }
+                                            </label>
+                                            <input type="file" id="inputMain" name="ImageMain" accept="image/*" hidden />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group align-items-center justify-content-center row mt-5">
+                                        @Html.LabelFor(model => model.TenUngVien, "Họ tên", new { @class = "control-label col-md-2" })
+                                        <div class="col-md-6">
+                                            @Html.EditorFor(model => model.TenUngVien, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.TenUngVien, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group align-items-center justify-content-center row">
+                                        @Html.LabelFor(model => model.SoDienThoai, "Số điện thoại", new { @class = "control-label col-md-2" })
+                                        <div class="col-md-6">
+                                            @Html.EditorFor(model => model.SoDienThoai, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.SoDienThoai, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group align-items-center justify-content-center row">
+                                        @Html.LabelFor(model => model.GioiTinh, "Giới tính", new { @class = "control-label col-md-2" })
+                                        <div class="col-md-6">
+                                            @Html.DropDownListFor(model => model.GioiTinh, new List<SelectListItem>()
+                                            {
+                                                new SelectListItem() {Value = "Nam", Text = "Nam"},
+                                                new SelectListItem() {Value = "Nữ", Text = "Nữ"}
+                                            }, "-- Chọn giới tính --",
+                                            new { @class = "form-control text-box single-line" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group align-items-center justify-content-center row">
+                                        @Html.LabelFor(model => model.NgaySinh, "Nhập ngày sinh", new { @class = "control-label col-md-2" })
+                                        <div class="col-md-6">
+                                            @Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                                            @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group align-items-center justify-content-center row">
+                                        @Html.LabelFor(model => model.DiaChi, "Nhập địa chỉ", new { @class = "control-label col-md-2" })
+                                        <div class="col-md-6">
+                                            @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group align-items-center justify-content-center row">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-6">
+                                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group align-items-center justify-content-center row mt-3">
+                                        <div class="col-md-2">
+                                            @Html.ActionLink("Trở về", "Index", "Home", null, new { @class = "btn btn-light" })
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <input type="submit" value="Cập nhật thông tin" class="btn btn-primary" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

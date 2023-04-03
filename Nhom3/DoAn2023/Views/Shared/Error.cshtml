@@ -1,13 +1,12 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Error</title>
-</head>
-<body>
-    <hgroup>
-      <h1>hello
-        </h1>
-    </hgroup>
-</body>
-</html>
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    ViewBag.Title = "Error";
+}
+
+<div class="d-flex justify-content-center align-items-center container" >
+    <div style="padding:20px;">
+        <p class="fs-3 text-dark fw-light">Không tìm thấy trang này. <br>Vui lòng quay lại <span class="fw-bold">trang chủ</span>!</p>
+    </div>
+</div>

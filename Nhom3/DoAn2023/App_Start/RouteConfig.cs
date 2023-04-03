@@ -46,18 +46,7 @@ namespace DoAn2023
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "DoAn2023.Controllers" }
-            );
-            routes.MapRoute(
-               name: "Home",
-               url: "{controller}/{action}/{id}",
-               defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-               namespaces: new[] { "DoAn2023.Controllers" }
-           );
-            routes.MapRoute(
-            name: "HomeIndex",
-            url: "home/index/{id}/{*catchall}",
-            defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-        );
+            );           
         }
     }
 }

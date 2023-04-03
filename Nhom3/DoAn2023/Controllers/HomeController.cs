@@ -25,7 +25,6 @@ namespace DoAn2023.Controllers
             ungVienDao = new UngVienDAL();
             TinTuyenDungDAL = new TinTuyenDungDAL();
         }
-
         public ActionResult About()
         {
             return View();

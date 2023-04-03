@@ -159,8 +159,8 @@ C:\Users\Acer\Downloads\Nhom3\DoAn2023\bin\System.Web.WebPages.Razor.xml
 C:\Users\Acer\Downloads\Nhom3\DoAn2023\bin\Newtonsoft.Json.xml
 C:\Users\Acer\Downloads\Nhom3\DoAn2023\bin\Antlr3.Runtime.pdb
 C:\Users\Acer\Downloads\Nhom3\DoAn2023\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Acer\Downloads\Nhom3\DoAn2023\obj\Debug\DoAn2023.csprojAssemblyReference.cache
 C:\Users\Acer\Downloads\Nhom3\DoAn2023\obj\Debug\DoAn2023.csproj.CoreCompileInputs.cache
 C:\Users\Acer\Downloads\Nhom3\DoAn2023\obj\Debug\DoAn2023.csproj.CopyComplete
 C:\Users\Acer\Downloads\Nhom3\DoAn2023\obj\Debug\DoAn2023.dll
 C:\Users\Acer\Downloads\Nhom3\DoAn2023\obj\Debug\DoAn2023.pdb
+C:\Users\Acer\Downloads\Nhom3\DoAn2023\obj\Debug\DoAn2023.csprojAssemblyReference.cache

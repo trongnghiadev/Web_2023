@@ -153,6 +153,7 @@
     <Compile Include="Common\TrangThaiUngTuyen.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\EmployerController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Areas\NhaTuyenDung\Controllers\LoginController.cs" />
     <Compile Include="Controllers\HoSoXinViecController.cs" />
@@ -228,9 +229,10 @@
     <Content Include="Assets\Admin\css\bootstrap.min.css" />
     <Content Include="Assets\Admin\css\icons.min.css" />
     <Content Include="Assets\Admin\css\styles.css" />
-    <Content Include="Assets\Admin\img\logo.png" />
     <Content Include="Assets\Admin\img\users\avatar-1.jpg" />
+    <Content Include="Assets\Admin\img\logo.png" />
     <Content Include="Assets\Client\css\HoSo\about.css" />
+    <Content Include="Assets\Client\css\404page.css" />
     <Content Include="Assets\Client\img\Blogs\fpt.jpg" />
     <Content Include="Assets\Client\img\Blogs\onemoutn.jpg" />
     <Content Include="Assets\Client\img\Blogs\prudential.jpg" />
@@ -572,6 +574,7 @@
     <Content Include="Images\image-member\logofn.png" />
     <Content Include="Images\image-member\trongnghia.png" />
     <Content Include="Images\image-member\tuan.png" />
+    <Content Include="Scripts\404.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -620,7 +623,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Areas\NhaTuyenDung\Views\Shared\_LayoutAccount.cshtml" />
     <Content Include="Areas\NhaTuyenDung\Views\Login\Register.cshtml" />
@@ -643,6 +645,8 @@
     <Content Include="Views\Home\DoiMatKhau.cshtml" />
     <Content Include="Views\Recruitment\PhuHop.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -653,6 +657,7 @@
     <Folder Include="Images\NhaTuyenDung\" />
     <Folder Include="Images\UngVien\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\CustomErrorUser\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

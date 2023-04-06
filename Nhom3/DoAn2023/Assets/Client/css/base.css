@@ -65,7 +65,10 @@ html {
 .text-active {
     color: var(--primary-color) !important;
 }
-
+.user__info--name span{
+    font-style:italic;
+    color:var(--black-color)
+}
 .text-line-1 {
     display: -webkit-box;
     -webkit-box-orient: vertical;

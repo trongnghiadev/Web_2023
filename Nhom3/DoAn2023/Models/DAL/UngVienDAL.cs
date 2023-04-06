@@ -114,8 +114,8 @@ namespace DoAn2023.Models.DAL
                 var result = await dbContext.SaveChangesAsync();
                 return result;
             }
-            catch (Exception)
-            {
+            catch (Exception )
+            {               
                 return -1;
             }
         }

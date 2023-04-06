@@ -289,6 +289,12 @@
     <Content Include="Assets\Client\img\create_cv.png" />
     <Content Include="Assets\Client\img\loading-buffering.gif" />
     <Content Include="Assets\Client\img\logo.jpg" />
+    <Content Include="Assets\Client\img\Recruitment\1.svg" />
+    <Content Include="Assets\Client\img\Recruitment\2.svg" />
+    <Content Include="Assets\Client\img\Recruitment\3.svg" />
+    <Content Include="Assets\Client\img\Recruitment\5.svg" />
+    <Content Include="Assets\Client\img\Recruitment\6.svg" />
+    <Content Include="Assets\Client\img\Recruitment\7.svg" />
     <Content Include="Assets\Client\img\upload_cv.png" />
     <Content Include="Assets\Client\js\Employer\baiViet.js" />
     <Content Include="Assets\Client\js\Employer\baiVietChoDuyet.js" />

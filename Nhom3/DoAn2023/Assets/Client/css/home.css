@@ -318,24 +318,45 @@
 
 .main__login--content,
 .main__register--content {
-    padding: 20px 25px;
+    padding: 4px 25px;
 }
 
+    .main__login--content img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height:110px;
+    }
+
+.text-des .text-header-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.text-des .text-header-des {
+    font-weight: lighter;
+}
+
+#link-login, #link-register {
+    color: var(--success-color);
+    text-decoration-style: none;
+}
 .login__form--input,
-.register__form--input {
-    margin: 15px;
+.register__form--input, .main__login--content .text-des {
+    margin: 8px;
 }
 
-.login__form--input > input,
-.register__form--input > input {
-    display: block;
-    padding: 8px 10px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #999;
-    letter-spacing: 1px;
-    outline: none;
-}
+    .login__form--input > input,
+    .register__form--input > input {
+        display: block;
+        padding: 8px 10px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #999;
+        letter-spacing: 1px;
+        outline: none;
+    }
 
 .form__input--submit,
 .form__register--submit {
@@ -343,7 +364,7 @@
     margin-top: 20px;
     color: var(--white-color);
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--success-color);
     border: none;
     opacity: 0.8;
     border-radius: 5px;

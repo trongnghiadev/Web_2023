@@ -12,6 +12,7 @@
 }
 
 @section css_Main {
+
     <link rel="stylesheet" href="~/Assets/Client/css/tintuyendung.css">
 }
 
@@ -22,11 +23,11 @@
 }
 
 <div class="main__fixed bg-img"></div>
-<div class="main__search">
-    <div class="main__search--wrapper grid wide">
-        @{ Html.RenderAction("_ViewSearch", "Home");}
-    </div>
-</div>
+@*<div class="main__search">
+        <div class="main__search--wrapper grid wide">
+            @{ Html.RenderAction("_ViewSearch", "Home");}
+        </div>
+    </div>*@
 
 <!-- Main Content -->
 <div class="main__employer">
@@ -79,8 +80,8 @@
                         </button>
                     </form>
                 }
-                else 
-                { 
+                else
+                {
                     <div class="employer__apply--cv">
                         Hết hạn ứng tuyển
                     </div>
@@ -89,6 +90,78 @@
             </div>
         </div>
         <div class="main__employer--content row">
+            <div class="col c-8">
+                <h1 class="employer__content--title employer--title">Chi tiết công việc</h1>
+                <div class="employer__content--info">
+                    <h3 class="content__info--title">1. Thông tin chung</h3>
+                    <div class="content__info--list row">
+                        <div class="l-6 box-item">
+                            <img src="~/Assets/Client/img/Recruitment/1.svg" />
+                            <div class="box-item-contain">
+                                <span class="title">Mức lương:</span>
+                                <span class="data ">@Model.MucLuong</span>
+                            </div>
+                        </div>
+                        <div class="l-6 box-item ">
+                            <img src="~/Assets/Client/img/Recruitment/5.svg" />
+                            <div class="box-item-contain">
+                                <span class="title">Số lượng tuyển:</span>
+                                <span class="data ">@Model.SoLuong</span>
+                            </div>
+                        </div>
+                        <div class="l-6 box-item ">
+                            <img src="~/Assets/Client/img/Recruitment/2.svg" />
+                            <div class="box-item-contain">
+                                <span class="title">Hình thức làm việc:</span>
+                                <span class="data ">@Model.LoaiCV</span>
+                            </div>
+                        </div>
+                        <div class="l-6 box-item ">
+                            <img src="~/Assets/Client/img/Recruitment/6.svg" />
+                            <div class="box-item-contain">
+                                <span class="title">Cấp bậc:</span>
+                                <span class="data ">@Model.CapBac</span>
+                            </div>
+                        </div>
+                        <div class="l-6 box-item">
+                            <img src="~/Assets/Client/img/Recruitment/3.svg" />
+                            <div class="box-item-contain">
+                                <span class="title">Giới tính:</span>
+                                <span class="data ">@Model.GioiTinhYC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__info--list row">
+                        <div class="l-12">
+                            <h5 class="title">Địa điểm làm việc:</h5>
+                            <p>- Khu vực: @Model.DiaChi</p>
+                            <p>- @Model.DiaChiLamViec</p>
+                        </div>
+                    </div>
+                    <h3 class="content__info--title">2. Mô tả công việc</h3>
+                    <div style="padding-left: 20px">
+                        <p class="data-contain">@Html.Raw(Model.MoTaCongViec)</p>
+                    </div>
+                    <h3 class="content__info--title">3. Yêu cầu ứng viên</h3>
+                    <div style="padding-left: 20px">
+                        <p class="data-contain">
+                            @Html.Raw(Model.YeuCauUngVien)
+                        </p>
+                    </div>
+                    <h3 class="content__info--title">4. Kỹ năng liên quan</h3>
+                    <div style="padding-left: 20px">
+                        <p class="data-contain">
+                            @Html.Raw(Model.KyNangLienQuan)
+                        </p>
+                    </div>
+                    <h3 class="content__info--title">5. Quyền lợi</h3>
+                    <div style="padding-left: 20px">
+                        <p class="data-contain">
+                            @Html.Raw(Model.KyNangLienQuan)
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="col c-4">
                 <div class="employer__content--company">
                     <h2 class="employer--title">Nhà tuyển dụng: </h2>
@@ -109,46 +182,6 @@
                             <strong>Địa chỉ: </strong><span>@Model.DiaChiNTD</span>
                         </li>
                     </ul>
-                </div>
-            </div>
-            <div class="col c-8">
-                <h1 class="employer__content--title employer--title">Chi tiết công việc</h1>
-                <div class="employer__content--info">
-                    <h3 class="content__info--title">1. Thông tin tuyển dụng</h3>
-                    <ul class="content__info--list">
-                        <li>Mức lương: @Model.MucLuong</li>
-                        <li>Hình thức làm việc: @Model.LoaiCV</li>
-                        <li>Giới tính: @Model.GioiTinhYC</li>
-                        <li>Số lượng tuyển: @Model.SoLuong</li>
-                        <li>Cấp bậc: @Model.CapBac</li>
-                        <li>
-                            Địa điểm làm việc:
-                            <p>- Khu vực: @Model.DiaChi</p>
-                            <p>- @Model.DiaChiLamViec</p>
-                        </li>
-                    </ul>
-                    <h3 class="content__info--title">2. Mô tả công việc</h3>
-                    <div style="padding-left: 20px">
-                        <p>@Html.Raw(Model.MoTaCongViec)</p>
-                    </div>
-                    <h3 class="content__info--title">3. Yêu cầu ứng viên</h3>
-                    <div style="padding-left: 20px">
-                        <p>
-                            @Html.Raw(Model.YeuCauUngVien)
-                        </p>
-                    </div>
-                    <h3 class="content__info--title">4. Kỹ năng liên quan</h3>
-                    <div style="padding-left: 20px">
-                        <p>
-                            @Html.Raw(Model.KyNangLienQuan)
-                        </p>
-                    </div>
-                    <h3 class="content__info--title">5. Quyền lợi</h3>
-                    <div style="padding-left: 20px">
-                        <p>
-                            @Html.Raw(Model.KyNangLienQuan)
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -179,7 +212,8 @@
                                     <a href="/HoSoXinViec/HoSo?ungvien=@item.MaUngVien&id=@item.MaHoSo" target="_blank">@item.TenHoSo</a>
                                 </div>
                             }
-                        }else
+                        }
+                        else
                         {
                             <div>
                                 <strong>Bạn chưa có hồ sơ xin việc</strong>

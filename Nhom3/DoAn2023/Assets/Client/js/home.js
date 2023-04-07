@@ -10,7 +10,7 @@ __('#btn-login, .login--close, .main__login').forEach((item) => {
     })
 })
 
-__('.register--close, .main__register').forEach((item) => {
+__('.register--close,#btn-register, .main__register').forEach((item) => {
     item.addEventListener('click', () => {
         _('.main__register').classList.toggle('show');
     })

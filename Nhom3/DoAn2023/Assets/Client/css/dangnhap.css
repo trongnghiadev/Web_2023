@@ -8,24 +8,41 @@
 }
 
 /* Main */
-.main {
+.section {
+    height: 950px;
+    width: 100%;
+    background: linear-gradient(50deg,#E1F7EB, #EAF7FA, #EDFBF7);
     position: relative;
 }
-
-.main__fixed {
+.main {
+    width: 1050px;
+    height: 600px;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 4px 22px -8px #0004;
+    display: flex;
+    overflow: hidden;
+}
+.main__fixed {
+    width: 41%;
     height: 100%;
-    z-index: -1;
+    padding: 25px 25px;
     opacity: 0.5;
-    background-image: url(../img/bg-seccity.jpg);
-    background-attachment: fixed;
+    background-image: url(../img/create_cv.png);
 }
 
 /* Main login */
+.main__login_res {
+    display: flex;
+    justify-content: center;
+}
 .main__login {
+    width: 59%;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
@@ -92,21 +109,29 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+.note-link {
+    text-decoration: none;
+    background-color: var(--success-color);
+    padding: 10px;
+    opacity: 0.8;
+    color:var(--white-color);
+}
 .form__input--submit {
     padding: 8px;
     margin-top: 20px;
     color: var(--white-color);
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--success-color);
     border: none;
     opacity: 0.8;
     outline: none;
     border-radius: 5px;
 }
 
-.form__input--submit:hover {
-    opacity: 1;
-}
+    .form__input--submit:hover, .note-link:hover {
+        opacity: 1;
+        color: var(--white-color);
+    }
 
 .main__login--note {
     text-align: center;

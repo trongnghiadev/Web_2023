@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="layoutAuthentication">
-        <div id="layoutAuthentication_content" style="background-image: url('../../../../Images/NhaTuyenDung/bg-seccity220613511.jpg')">
+        <div id="layoutAuthentication_content" style="background-image:linear-gradient(50deg,#E1F7EB, #EAF7FA, #EDFBF7);">
             <main>
 
                 @if (TempData["AlertMessage"] != null)
@@ -28,10 +28,10 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                <div class="card-header">
-                                    <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="~/Images/image-member/logofn.png" />
-                                    <h3 class="text-center font-weight-light my-4">Đăng nhập</h3>
+                                <div class="logo-banner"style="width:80px;margin:auto;margin-top:16px;">
+                                    <img src="~/Images/image-member/logofn.png" />
                                 </div>
+                                <h3 class="card-header text-center font-weight-light my-4">Đăng nhập</h3>
                                 <div class="card-body">
                                     @using (Html.BeginForm("Index", "Login", FormMethod.Post))
                                     {
@@ -39,8 +39,8 @@
                                         @Html.ValidationSummary(true, null, new { @class = "error text-danger" })
                                         <div class="form-floating mb-3">
                                             @*<input class="form-control" asp-for="Username" type="text" placeholder="Nhập tài khoản" />
-                                        <label asp-for="Username" class="control-label">Tên tài khoản</label>
-                                        <span asp-validation-for="Username" class="text-danger"></span>*@
+                    <label asp-for="Username" class="control-label">Tên tài khoản</label>
+                    <span asp-validation-for="Username" class="text-danger"></span>*@
 
                                             @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @autocomplete = "false" })
                                             @Html.LabelFor(model => model.UserName, new { @class = "control-label" })
@@ -48,8 +48,8 @@
                                         </div>
                                         <div class="form-floating mb-3">
                                             @*<input class="form-control" asp-for="Password" type="password" placeholder="Mật khẩu" />
-                                        <label asp-for="Password" class="control-label">Mật khẩu</label>
-                                        <span asp-validation-for="Password" class="text-danger"></span>*@
+                    <label asp-for="Password" class="control-label">Mật khẩu</label>
+                    <span asp-validation-for="Password" class="text-danger"></span>*@
 
                                             @Html.TextBoxFor(model => model.PassWord, new { @class = "form-control", @type = "password", @autocomplete = "false" })
                                             @Html.LabelFor(model => model.PassWord, new { @class = "control-label" })
@@ -57,7 +57,7 @@
                                         </div>
                                         <div class="form-check mb-3">
                                             @*<input class="form-check-input" asp-for="RememberMe" type="checkbox" value="" />
-                                        <label class="form-check-label">Nhớ mật khẩu</label>*@
+                    <label class="form-check-label">Nhớ mật khẩu</label>*@
 
                                             @Html.TextBoxFor(model => model.RememberMe, new { @class = "form-check-input", @type = "checkbox" })
                                             @Html.LabelFor(model => model.RememberMe, "Nhớ mật khẩu", new { @class = "form-check-label" })

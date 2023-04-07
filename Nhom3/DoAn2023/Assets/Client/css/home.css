@@ -269,7 +269,7 @@
     transform: translateX(-50%);
     top: 50px;
     background-color: var(--white-color);
-    width: 500px;
+    width: 650px;
     border-radius: 10px;
     font-size: 15px;
     transition: all .5s linear;
@@ -277,7 +277,6 @@
     overflow: hidden;
     display: none;
 }
-
 .main__login.show,
 .main__login.show .main__login--wrapper,
 .main__register.show .main__register--wrapper {
@@ -320,15 +319,6 @@
 .main__register--content {
     padding: 4px 25px;
 }
-
-    .main__login--content img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        height:110px;
-    }
-
 .text-des .text-header-title {
     font-weight: bold;
     font-size: 16px;
@@ -337,27 +327,40 @@
 .text-des .text-header-des {
     font-weight: lighter;
 }
-
+.note-link {
+    text-decoration: none;
+    background-color: var(--success-color);
+    padding: 10px;
+    opacity: 0.8;
+}
 #link-login, #link-register {
-    color: var(--success-color);
+    color: var(--white-color);
     text-decoration-style: none;
 }
-.login__form--input,
-.register__form--input, .main__login--content .text-des {
-    margin: 8px;
+
+.login__form--input > input,
+.register__form--input > input {
+    display: block;
+    padding: 8px 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #999;
+    letter-spacing: 1px;
+    outline: none;
 }
+.note-title {
+    font-size: 24px;
+    text-align:center;
+    font-weight: 700;
+    line-height: 3;
 
-    .login__form--input > input,
-    .register__form--input > input {
-        display: block;
-        padding: 8px 10px;
-        width: 100%;
-        border-radius: 5px;
-        border: 1px solid #999;
-        letter-spacing: 1px;
-        outline: none;
-    }
-
+}
+.note-description {
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    line-height: 1.6;
+}
 .form__input--submit,
 .form__register--submit {
     padding: 8px;
@@ -371,12 +374,12 @@
 }
 
 .form__input--submit:hover,
-.form__input--submit:hover {
+.form__input--submit:hover,.note-link:hover {
     opacity: 1;
 }
 
 .main__login--note,
 .main__register--note {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }

@@ -233,30 +233,32 @@
             <h4>Đăng Nhập</h4>
             <div class="login--close"></div>
         </div>
-        <div class="main__login--content">
-            <img src="~/Images/image-member/logofn.png" />
-            <div class="text-des">
-                <p class="text-header-title">Chào mừng bạn trở lại,</p>
-                <p class="text-header-des">Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội sự nghiệp lý tưởng</p>
+        <div class="main__login--content row">
+            <div class="l-6 m-7 c-12">
+                <h4 class="note-title">Chào mừng bạn trở lại</h4>
+                <p class="note-description">Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội sự nghiệp lý tưởng</p>
+                <div class="main__login--note">
+                    <p>Bạn chưa có tài khoản? <strong><a class="note-link" id="link-register" href="javascript:void(0)">Đăng ký ngay</a></strong></p>
+                </div>
             </div>
-             <form class="main__login--form" method="post">
-                <div id="login_message" class="text-danger text-center"></div>
-                <div class="login__form--input">
-                    <label for="login_email">Email</label>
-                    <input type="email" id="login_email" placeholder="Nhập email của bạn" required autocomplete="off">
-                </div>
-                <div class="login__form--input">
-                    <label for="login_password">Mật khẩu</label>
-                    <input type="password" id="login_password" placeholder="Nhập mật khẩu" required autocomplete="off">
-                </div>
-                <div class="login__form--input">
-                    <button class="form__input--submit" id="form_btn-login">Đăng nhập</button>
-                </div>
-            </form>
+            <div class="l-6 m-5 c-12">
+                <form class="main__login--form" method="post">
+                    <div id="login_message" class="text-danger text-center"></div>
+                    <div class="login__form--input">
+                        <label for="login_email">Email</label>
+                        <input type="email" id="login_email" placeholder="Nhập email của bạn" required autocomplete="off">
+                    </div>
+                    <div class="login__form--input">
+                        <label for="login_password">Mật khẩu</label>
+                        <input type="password" id="login_password" placeholder="Nhập mật khẩu" required autocomplete="off">
+                    </div>
+                    <div class="login__form--input">
+                        <button class="form__input--submit" id="form_btn-login">Đăng nhập</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="main__login--note">
-            <p>Bạn chưa có tài khoản? <strong><a id="link-register" href="javascript:void(0)">Đăng ký ngay</a></strong></p>
-        </div>
+     
     </div>
 </div>
 
@@ -296,7 +298,7 @@
             </form>
         </div>
         <div class="main__register--note">
-            <p>Bạn đã có tài khoản? <strong><a id="link-login" href="javascript:void(0)">Đăng nhập ngay</a></strong></p>
+            <p>Bạn đã có tài khoản? <strong><a id="link-login"class="note-link" href="javascript:void(0)">Đăng nhập ngay</a></strong></p>
         </div>
     </div>
 </div>

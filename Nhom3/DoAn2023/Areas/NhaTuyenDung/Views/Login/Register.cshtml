@@ -5,7 +5,7 @@
     Layout = "~/Areas/NhaTuyenDung/Views/Shared/_LayoutAccount.cshtml";
 }
 
-<div class="main__login">
+<div class="main__login_res">
     <div class="main__login--wrapper">
         <div class="main__login--title">
             <h4>Đăng ký tài khoản</h4>
@@ -56,7 +56,7 @@
             }
         </div>
         <div class="main__login--note">
-            <p>Bạn chưa có tài khoản? <strong>@Html.ActionLink("Đăng nhập ngay", "Index", "Login", new { }, new { @id = "link-login"})</strong></p>
+            <p>Bạn chưa có tài khoản? <strong>@Html.ActionLink("Đăng nhập ngay", "Index", "Login", new { }, new { @id = "link-login",@class="note-link"})</strong></p>
         </div>
     </div>
 </div>

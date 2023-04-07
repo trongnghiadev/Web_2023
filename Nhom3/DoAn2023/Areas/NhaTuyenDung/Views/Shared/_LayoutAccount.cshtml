@@ -23,7 +23,7 @@
         <header class="header" id="header">
             <div class="header__logo">
                 <a href="/" class="header__logo--link">
-                    <img src="~/Images/image-member/logofn.png" />              
+                    <img src="~/Images/image-member/logofn.png" />
                 </a>
             </div>
             <nav class="header__navbar">
@@ -42,18 +42,20 @@
         </header>
 
         <!-- Main -->
-        <div class="main__fixed bg-img"></div>
-        @if (TempData["Notify"] != null)
-        {
-            <div id="msgAlert" class="alert @TempData["AlertType"]" role="alert">
-                @TempData["Notify"]
-            </div>
-        }
-        @RenderBody()
+        <div class="section">
+            @if (TempData["Notify"] != null)
+            {
+                <div id="msgAlert" class="alert @TempData["AlertType"]" role="alert">
+                    @TempData["Notify"]
+                </div>
+            }
+            @RenderBody()
+
+        </div>
     </div>
 
 
-    @Scripts.Render("~/bundles/jquery")   
+    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
     <script>
         setTimeout(function () {

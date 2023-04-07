@@ -240,7 +240,7 @@ ul.dropdown-menu.inner {
         background-color: var(--primary-color);
     }
 
-    .header__navbar--item a, .header__login--item a, .header__register--item {
+    .header__navbar--item a, .header__login--item a, .header__register--item a {
         color: var(--black-color);
         position: relative;
         text-decoration: none;
